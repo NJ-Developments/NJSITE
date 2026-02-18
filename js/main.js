@@ -4,6 +4,54 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  // --- Page load fade-in ---
+  document.body.classList.add('loaded');
+
+  // --- Scroll progress bar ---
+  const progressBar = document.createElement('div');
+  progressBar.className = 'scroll-progress';
+  document.body.appendChild(progressBar);
+
+  function updateProgress() {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    progressBar.style.width = progress + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+
+  // --- Parallax on hero/page headers ---
+  const parallaxEls = document.querySelectorAll('.hero, .page-header, .portfolio-header');
+  if (parallaxEls.length > 0) {
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      parallaxEls.forEach(el => {
+        if (scrollY < el.offsetHeight + el.offsetTop) {
+          const content = el.querySelector('.container');
+          if (content) {
+            content.style.transform = 'translateY(' + (scrollY * 0.25) + 'px)';
+            content.style.opacity = Math.max(1 - scrollY / (el.offsetHeight * 1.2), 0);
+          }
+        }
+      });
+    }, { passive: true });
+  }
+
+  // --- Button ripple effect ---
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.btn');
+    if (!btn) return;
+    const ripple = document.createElement('span');
+    ripple.className = 'ripple';
+    const rect = btn.getBoundingClientRect();
+    const size = Math.max(rect.width, rect.height);
+    ripple.style.width = ripple.style.height = size + 'px';
+    ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
+    ripple.style.top = (e.clientY - rect.top - size / 2) + 'px';
+    btn.appendChild(ripple);
+    ripple.addEventListener('animationend', () => ripple.remove());
+  });
+
   // --- Mobile Navigation ---
   const hamburger = document.querySelector('.hamburger');
   const navLinks = document.querySelector('.nav-links');

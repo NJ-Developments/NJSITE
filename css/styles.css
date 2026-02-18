@@ -44,6 +44,12 @@ body {
   line-height: 1.7;
   background: var(--white);
   -webkit-font-smoothing: antialiased;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+body.loaded {
+  opacity: 1;
 }
 
 a {
@@ -136,6 +142,28 @@ h3 { font-size: 1.25rem; }
 .btn-sm {
   padding: 10px 20px;
   font-size: 0.9rem;
+}
+
+/* --- Button Ripple Effect --- */
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn .ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  transform: scale(0);
+  animation: ripple-effect 0.6s ease-out;
+  pointer-events: none;
+}
+
+@keyframes ripple-effect {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
 }
 
 /* --- Navbar --- */
@@ -323,11 +351,41 @@ h3 { font-size: 1.25rem; }
   }
 }
 
+/* --- Scroll Progress Bar --- */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: var(--gradient-brand);
+  z-index: 1100;
+  transition: none;
+}
+
 /* --- Hero --- */
 .hero {
   padding: 170px 0 110px;
-  background: var(--gradient-subtle);
+  background: linear-gradient(135deg, #ffffff 0%, #eef6f5 25%, #e4eaf1 50%, #e0f5f1 75%, #ffffff 100%);
+  background-size: 300% 300%;
+  animation: gradient-shift 12s ease infinite;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* --- Page Header Animated Gradient --- */
+.page-header,
+.portfolio-header {
+  background: linear-gradient(135deg, #ffffff 0%, #eef6f5 25%, #e4eaf1 50%, #e0f5f1 75%, #ffffff 100%);
+  background-size: 300% 300%;
+  animation: gradient-shift 12s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .hero h1 {
@@ -1497,6 +1555,31 @@ h3 { font-size: 1.25rem; }
   background: var(--white);
 }
 
+/* --- Footer Social Links --- */
+.footer-socials {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.footer-social-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.7);
+  transition: var(--transition);
+}
+
+.footer-social-link:hover {
+  background: var(--purple);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
 /* --- Footer --- */
 .footer {
   background: var(--dark);
@@ -1548,6 +1631,59 @@ h3 { font-size: 1.25rem; }
   padding: 20px 0;
   text-align: center;
   font-size: 0.85rem;
+}
+
+/* --- Micro-interactions --- */
+.card-icon {
+  transition: background 0.35s cubic-bezier(0.4, 0, 0.2, 1), color 0.35s cubic-bezier(0.4, 0, 0.2, 1), transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover .card-icon {
+  transform: scale(1.1) rotate(-3deg);
+}
+
+.step-number {
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.process-step:hover .step-number {
+  transform: scale(1.1);
+  box-shadow: var(--shadow-accent);
+}
+
+.reason-icon {
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), background 0.35s ease, color 0.35s ease;
+}
+
+.reason-card:hover .reason-icon {
+  transform: scale(1.1);
+  background: var(--gradient-brand);
+  color: var(--white);
+}
+
+.tag {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tag:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(42, 157, 143, 0.2);
+}
+
+.founder-row {
+  transition: var(--transition), transform 0.3s ease;
+}
+
+.founder-row:hover {
+  transform: translateX(4px);
+}
+
+.story-value-card {
+  transition: var(--transition), transform 0.3s ease;
+}
+
+.story-value-card:hover {
+  transform: translateY(-2px);
 }
 
 /* --- Animations --- */
