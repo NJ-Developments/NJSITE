@@ -1,0 +1,21 @@
+{
+  "name": "NJ Developments — Digital Agency",
+  "short_name": "NJ Developments",
+  "description": "Full-service digital agency delivering custom websites, software, SEO, and marketing solutions for small and medium businesses.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1c3654",
+  "icons": [
+    {
+      "src": "images/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

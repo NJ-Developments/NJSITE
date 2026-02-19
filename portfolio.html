@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio — NJ Developments | Our Work & Case Studies</title>
   <meta name="description" content="See the websites, software, and digital solutions NJ Developments has built for real businesses. Browse our portfolio of client projects and results.">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="canonical" href="https://njdevelopmentsales.web.app/portfolio.html">
 
   <!-- Open Graph -->
@@ -26,7 +26,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#1c3654">
+  <meta name="author" content="NJ Developments">
+  <meta name="geo.region" content="US-CT">
+  <meta name="geo.placename" content="Connecticut">
   <link rel="icon" href="images/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="images/logo.png">
+  <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="css/styles.css?v=2">
 
   <!-- Structured Data -->
@@ -50,6 +56,78 @@
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://njdevelopmentsales.web.app/" },
           { "@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://njdevelopmentsales.web.app/portfolio.html" }
         ]
+      },
+      {
+        "@type": "ItemList",
+        "name": "NJ Developments Portfolio",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "CreativeWork",
+              "name": "Grow Together Initiative",
+              "description": "A clean, professional website for a nonprofit education initiative — built to communicate their mission, programs, and drive community engagement.",
+              "url": "https://growtogetherinitiativeinc.com/",
+              "creator": { "@id": "https://njdevelopmentsales.web.app/#organization" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "CreativeWork",
+              "name": "Ace Hardware",
+              "description": "A modern, user-friendly website for a local Ace Hardware store — complete with product browsing, store info, and SEO optimization.",
+              "url": "https://katzhardware.com/",
+              "creator": { "@id": "https://njdevelopmentsales.web.app/#organization" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "CreativeWork",
+              "name": "Ice Cream Productions",
+              "description": "Brand identity and website for a creative production company — showcasing their portfolio with a bold, media-rich design.",
+              "url": "https://icecreamproductions.org/",
+              "creator": { "@id": "https://njdevelopmentsales.web.app/#organization" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+              "@type": "CreativeWork",
+              "name": "Golf Cove",
+              "description": "A sleek website and booking platform for a local golf entertainment venue, featuring event scheduling and integrated POS system.",
+              "url": "https://golfcove.web.app/",
+              "creator": { "@id": "https://njdevelopmentsales.web.app/#organization" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "item": {
+              "@type": "CreativeWork",
+              "name": "Cedar Stone Tree Works",
+              "description": "A professional web presence for a tree service company — designed to showcase their work, build trust, and generate leads.",
+              "url": "https://cedarstonetreeworks.com/",
+              "creator": { "@id": "https://njdevelopmentsales.web.app/#organization" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "item": {
+              "@type": "CreativeWork",
+              "name": "RBM Brokerage",
+              "description": "A professional website for a brokerage firm — built to establish credibility, showcase services, and convert visitors into clients.",
+              "url": "https://rbmbrokerage.com/",
+              "creator": { "@id": "https://njdevelopmentsales.web.app/#organization" }
+            }
+          }
+        ]
       }
     ]
   }
@@ -57,8 +135,10 @@
 </head>
 <body>
 
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
   <!-- Navbar -->
-  <nav class="navbar">
+  <nav class="navbar" aria-label="Main navigation">
     <div class="container">
       <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="NJ Developments" class="nav-logo-img"></a>
       <div class="nav-links">
@@ -75,6 +155,8 @@
       </button>
     </div>
   </nav>
+
+  <main id="main-content">
 
   <!-- Page Header -->
   <section class="portfolio-header">
@@ -105,25 +187,25 @@
   <section class="logo-marquee">
     <div class="marquee-track">
       <div class="marquee-inner">
-        <a href="https://katz-ace-hardware.web.app/" target="_blank" rel="noopener" class="marquee-logo"><img src="images/clients/katz-logo.jpg" alt="Katz Ace Hardware"></a>
+        <a href="https://katzhardware.com/" target="_blank" rel="noopener" class="marquee-logo"><img src="images/clients/katz-logo.jpg" alt="Katz Ace Hardware"></a>
         <a href="https://golfcove.web.app/" target="_blank" rel="noopener" class="marquee-logo"><img src="images/clients/golf-cove.jpg" alt="Golf Cove"></a>
         <a href="https://icecreamproductions.org/" target="_blank" rel="noopener" class="marquee-logo"><img src="images/clients/ice-cream-productions.png" alt="Ice Cream Productions"></a>
         <a href="https://growtogetherinitiativeinc.com/" target="_blank" rel="noopener" class="marquee-logo"><img src="images/clients/grow-logo.png" alt="Grow Together Initiative"></a>
         <a href="https://cedarstonetreeworks.com/" target="_blank" rel="noopener" class="marquee-logo"><img src="images/clients/cedar-logo.png" alt="Cedar Stone Tree Works"></a>
         <a href="https://rbmbrokerage.com/" target="_blank" rel="noopener" class="marquee-logo"><img src="images/clients/rbm-logo.png" alt="RBM Brokerage"></a>
-        <a href="https://katz-ace-hardware.web.app/" target="_blank" rel="noopener" class="marquee-logo"><img src="images/clients/katz-logo.jpg" alt="Katz Ace Hardware"></a>
+        <a href="https://katzhardware.com/" target="_blank" rel="noopener" class="marquee-logo"><img src="images/clients/katz-logo.jpg" alt="Katz Ace Hardware"></a>
         <a href="https://golfcove.web.app/" target="_blank" rel="noopener" class="marquee-logo"><img src="images/clients/golf-cove.jpg" alt="Golf Cove"></a>
         <a href="https://icecreamproductions.org/" target="_blank" rel="noopener" class="marquee-logo"><img src="images/clients/ice-cream-productions.png" alt="Ice Cream Productions"></a>
         <a href="https://growtogetherinitiativeinc.com/" target="_blank" rel="noopener" class="marquee-logo"><img src="images/clients/grow-logo.png" alt="Grow Together Initiative"></a>
         <a href="https://cedarstonetreeworks.com/" target="_blank" rel="noopener" class="marquee-logo"><img src="images/clients/cedar-logo.png" alt="Cedar Stone Tree Works"></a>
         <a href="https://rbmbrokerage.com/" target="_blank" rel="noopener" class="marquee-logo"><img src="images/clients/rbm-logo.png" alt="RBM Brokerage"></a>
-        <a href="https://katz-ace-hardware.web.app/" target="_blank" rel="noopener" class="marquee-logo"><img src="images/clients/katz-logo.jpg" alt="Katz Ace Hardware"></a>
+        <a href="https://katzhardware.com/" target="_blank" rel="noopener" class="marquee-logo"><img src="images/clients/katz-logo.jpg" alt="Katz Ace Hardware"></a>
         <a href="https://golfcove.web.app/" target="_blank" rel="noopener" class="marquee-logo"><img src="images/clients/golf-cove.jpg" alt="Golf Cove"></a>
         <a href="https://icecreamproductions.org/" target="_blank" rel="noopener" class="marquee-logo"><img src="images/clients/ice-cream-productions.png" alt="Ice Cream Productions"></a>
         <a href="https://growtogetherinitiativeinc.com/" target="_blank" rel="noopener" class="marquee-logo"><img src="images/clients/grow-logo.png" alt="Grow Together Initiative"></a>
         <a href="https://cedarstonetreeworks.com/" target="_blank" rel="noopener" class="marquee-logo"><img src="images/clients/cedar-logo.png" alt="Cedar Stone Tree Works"></a>
         <a href="https://rbmbrokerage.com/" target="_blank" rel="noopener" class="marquee-logo"><img src="images/clients/rbm-logo.png" alt="RBM Brokerage"></a>
-        <a href="https://katz-ace-hardware.web.app/" target="_blank" rel="noopener" class="marquee-logo"><img src="images/clients/katz-logo.jpg" alt="Katz Ace Hardware"></a>
+        <a href="https://katzhardware.com/" target="_blank" rel="noopener" class="marquee-logo"><img src="images/clients/katz-logo.jpg" alt="Katz Ace Hardware"></a>
         <a href="https://golfcove.web.app/" target="_blank" rel="noopener" class="marquee-logo"><img src="images/clients/golf-cove.jpg" alt="Golf Cove"></a>
         <a href="https://icecreamproductions.org/" target="_blank" rel="noopener" class="marquee-logo"><img src="images/clients/ice-cream-productions.png" alt="Ice Cream Productions"></a>
         <a href="https://growtogetherinitiativeinc.com/" target="_blank" rel="noopener" class="marquee-logo"><img src="images/clients/grow-logo.png" alt="Grow Together Initiative"></a>
@@ -156,9 +238,9 @@
         </div>
 
         <div class="portfolio-card fade-in">
-          <a href="https://katz-ace-hardware.web.app/" target="_blank" rel="noopener" class="portfolio-preview-link">
+          <a href="https://katzhardware.com/" target="_blank" rel="noopener" class="portfolio-preview-link">
             <div class="portfolio-preview">
-              <iframe src="https://katz-ace-hardware.web.app/" loading="lazy" title="Katz Ace Hardware preview" tabindex="-1"></iframe>
+              <iframe src="https://katzhardware.com/" loading="lazy" title="Katz Ace Hardware preview" tabindex="-1"></iframe>
             </div>
           </a>
           <div class="portfolio-info">
@@ -257,17 +339,21 @@
     </div>
   </section>
 
+  </main>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="NJ Developments" class="nav-logo-img"></a>
-          <p>A full-service digital agency delivering custom websites, software, and marketing solutions that drive measurable business growth.</p>
-          <div class="footer-socials">
-            <a href="#" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-            <a href="#" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-            <a href="#" target="_blank" rel="noopener" class="footer-social-link" aria-label="X (Twitter)"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          <div class="footer-brand-text">
+            <p>A full-service digital agency delivering custom websites, software, and marketing solutions that drive measurable business growth.</p>
+            <div class="footer-socials">
+              <a href="#" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+              <a href="#" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+              <a href="#" target="_blank" rel="noopener" class="footer-social-link" aria-label="X (Twitter)"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            </div>
           </div>
         </div>
         <div class="footer-links">

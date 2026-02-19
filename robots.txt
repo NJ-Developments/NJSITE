@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /firebase.json
+Disallow: /.firebaserc
 
 Sitemap: https://njdevelopmentsales.web.app/sitemap.xml

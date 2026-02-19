@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NJ Developments — Digital Agency for Growing Businesses</title>
   <meta name="description" content="NJ Developments builds websites, custom software, and handles SEO & marketing for small-medium businesses. Get a free consultation today.">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="canonical" href="https://njdevelopmentsales.web.app/">
 
   <!-- Open Graph -->
@@ -26,7 +26,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#1c3654">
+  <meta name="author" content="NJ Developments">
+  <meta name="geo.region" content="US-CT">
+  <meta name="geo.placename" content="Connecticut">
   <link rel="icon" href="images/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="images/logo.png">
+  <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="css/styles.css?v=2">
 
   <!-- Structured Data -->
@@ -39,11 +45,33 @@
         "@id": "https://njdevelopmentsales.web.app/#organization",
         "name": "NJ Developments",
         "url": "https://njdevelopmentsales.web.app/",
-        "logo": "https://njdevelopmentsales.web.app/images/logo.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://njdevelopmentsales.web.app/images/logo.png",
+          "width": 512,
+          "height": 512
+        },
         "email": "Njdevelopments123@gmail.com",
         "telephone": "+1-860-987-7606",
-        "description": "Full-service digital agency delivering custom websites, software, and marketing solutions for small and medium businesses.",
+        "description": "Full-service digital agency delivering custom websites, software, SEO, and marketing solutions for small and medium businesses across the United States.",
         "foundingDate": "2025",
+        "founder": [
+          { "@type": "Person", "name": "Jamiah Bartlett" },
+          { "@type": "Person", "name": "Javier Flores" },
+          { "@type": "Person", "name": "Nolan Krieger" }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressRegion": "CT",
+          "addressCountry": "US"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-860-987-7606",
+          "contactType": "sales",
+          "email": "Njdevelopments123@gmail.com",
+          "availableLanguage": "English"
+        },
         "sameAs": []
       },
       {
@@ -51,7 +79,12 @@
         "@id": "https://njdevelopmentsales.web.app/#website",
         "url": "https://njdevelopmentsales.web.app/",
         "name": "NJ Developments",
-        "publisher": { "@id": "https://njdevelopmentsales.web.app/#organization" }
+        "publisher": { "@id": "https://njdevelopmentsales.web.app/#organization" },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://njdevelopmentsales.web.app/?s={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
       },
       {
         "@type": "WebPage",
@@ -60,21 +93,85 @@
         "name": "NJ Developments — Digital Agency for Growing Businesses",
         "description": "NJ Developments builds websites, custom software, and handles SEO & marketing for small-medium businesses.",
         "isPartOf": { "@id": "https://njdevelopmentsales.web.app/#website" },
-        "about": { "@id": "https://njdevelopmentsales.web.app/#organization" }
+        "about": { "@id": "https://njdevelopmentsales.web.app/#organization" },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://njdevelopmentsales.web.app/" }
+          ]
+        }
       },
       {
         "@type": "ProfessionalService",
+        "@id": "https://njdevelopmentsales.web.app/#business",
         "name": "NJ Developments",
         "url": "https://njdevelopmentsales.web.app/",
         "logo": "https://njdevelopmentsales.web.app/images/logo.png",
+        "image": "https://njdevelopmentsales.web.app/images/logo.png",
         "telephone": "+1-860-987-7606",
         "email": "Njdevelopments123@gmail.com",
         "priceRange": "$$",
-        "serviceType": ["Web Development", "Custom Software", "SEO", "Digital Marketing", "App Development"],
+        "serviceType": ["Web Development", "Custom Software", "SEO", "Digital Marketing", "App Development", "AI Reception", "Online Ordering Systems"],
         "areaServed": {
           "@type": "Country",
           "name": "United States"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Digital Services",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Website Development", "description": "Custom-designed, fast, responsive websites that turn visitors into customers." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom Software Development", "description": "Tailored platforms and tools built to streamline your unique business operations." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SEO & Google Optimization", "description": "Search engine optimization and Google Business Profile management to get found online." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Digital Marketing & Ads", "description": "Targeted digital advertising to reach the right audience at the right time." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "App Development", "description": "Mobile and web applications built for performance and usability." } }
+          ]
         }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What services does NJ Developments offer?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "NJ Developments offers website development, custom software, online ordering & POS systems, SEO & Google optimization, digital marketing & ads, AI reception, app development, and ongoing support & maintenance."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does it take to build a website?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most projects go from concept to launch in weeks, not months. The exact timeline depends on the scope and complexity of your project. We move fast without cutting corners."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer free consultations?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we offer completely free consultations. Tell us about your project and we'll put together a custom plan — no commitment, no pressure. Call us at 860-987-7606 or fill out our contact form."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What makes NJ Developments different from other agencies?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We're not a faceless agency. Every project is custom-built — no templates. We provide partner-level service with fast turnaround, and we don't disappear after launch. We're your long-term technology partner handling everything from websites to marketing."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide ongoing support after launch?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely. We provide hosting, maintenance, security updates, content updates, and performance monitoring. We stick around to make sure everything keeps running smoothly long after launch."
+            }
+          }
+        ]
       }
     ]
   }
@@ -82,8 +179,10 @@
 </head>
 <body>
 
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
   <!-- Navbar -->
-  <nav class="navbar">
+  <nav class="navbar" aria-label="Main navigation">
     <div class="container">
       <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="NJ Developments" class="nav-logo-img"></a>
       <div class="nav-links">
@@ -101,11 +200,13 @@
     </div>
   </nav>
 
+  <main id="main-content">
+
   <!-- Hero -->
   <section class="hero">
     <div class="container">
-      <h1>Custom Digital Products That<br><span class="gradient-text">Grow Your Business</span></h1>
-      <p>Websites, custom software, and marketing solutions designed for small and medium businesses ready to level up.</p>
+      <h1>Websites, Custom Software &<br><span class="gradient-text">Digital Growth for Your Business</span></h1>
+      <p>From stunning websites to powerful software and marketing that converts — we help businesses launch, grow, and scale.</p>
       <div class="hero-buttons">
         <a href="contact.html" class="btn btn-primary">Start Your Project</a>
         <a href="services.html" class="btn btn-outline">Our Services</a>
@@ -133,7 +234,7 @@
           <p>Tailored platforms and tools built to streamline your unique business operations.</p>
         </div>
         <div class="card fade-in">
-          <div class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+          <div class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
           <h3>SEO &amp; Google</h3>
           <p>Get found online. We optimize your presence so customers come to you.</p>
         </div>
@@ -149,6 +250,49 @@
     </div>
   </section>
 
+  <!-- FAQ Section -->
+  <section class="section section-gray">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">FAQ</span>
+        <h2>Frequently Asked Questions</h2>
+        <p>Quick answers to the questions we hear most from business owners.</p>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item fade-in">
+          <summary class="faq-question">What services does NJ Developments offer?</summary>
+          <div class="faq-answer">
+            <p>We offer website development, custom software, online ordering &amp; POS systems, SEO &amp; Google optimization, digital marketing &amp; ads, AI reception, app development, and ongoing support &amp; maintenance. Everything you need to build and grow your online presence.</p>
+          </div>
+        </details>
+        <details class="faq-item fade-in">
+          <summary class="faq-question">How long does it take to build a website?</summary>
+          <div class="faq-answer">
+            <p>Most projects go from concept to launch in weeks, not months. The exact timeline depends on the scope and complexity of your project. We move fast without cutting corners.</p>
+          </div>
+        </details>
+        <details class="faq-item fade-in">
+          <summary class="faq-question">Do you offer free consultations?</summary>
+          <div class="faq-answer">
+            <p>Yes, we offer completely free consultations. Tell us about your project and we'll put together a custom plan — no commitment, no pressure. Call us at <a href="tel:8609877606">860-987-7606</a> or <a href="contact.html">fill out our contact form</a>.</p>
+          </div>
+        </details>
+        <details class="faq-item fade-in">
+          <summary class="faq-question">What makes NJ Developments different from other agencies?</summary>
+          <div class="faq-answer">
+            <p>We're not a faceless agency. Every project is custom-built — no templates. We provide partner-level service with fast turnaround, and we don't disappear after launch. We're your long-term technology partner handling everything from websites to marketing.</p>
+          </div>
+        </details>
+        <details class="faq-item fade-in">
+          <summary class="faq-question">Do you provide ongoing support after launch?</summary>
+          <div class="faq-answer">
+            <p>Absolutely. We provide hosting, maintenance, security updates, content updates, and performance monitoring. We stick around to make sure everything keeps running smoothly long after launch.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA Banner -->
   <section class="cta-banner">
     <div class="container fade-in">
@@ -158,18 +302,22 @@
     </div>
   </section>
 
+  </main>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="NJ Developments" class="nav-logo-img"></a>
-          <p>A full-service digital agency delivering custom websites, software, and marketing solutions that drive measurable business growth.</p>
-          <div class="footer-socials">
+          <div class="footer-brand-text">
+            <p>A full-service digital agency delivering custom websites, software, and marketing solutions that drive measurable business growth.</p>
+            <div class="footer-socials">
             <!-- TODO: Replace # with your actual social media URLs -->
             <a href="#" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
             <a href="#" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
             <a href="#" target="_blank" rel="noopener" class="footer-social-link" aria-label="X (Twitter)"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            </div>
           </div>
         </div>
         <div class="footer-links">

@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', updateProgress, { passive: true });
 
   // --- Parallax on hero/page headers ---
-  const parallaxEls = document.querySelectorAll('.hero, .page-header, .portfolio-header');
+  const parallaxEls = document.querySelectorAll('.hero, .page-header');
   if (parallaxEls.length > 0) {
     window.addEventListener('scroll', () => {
       const scrollY = window.scrollY;
