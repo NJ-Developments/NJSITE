@@ -149,12 +149,21 @@
           </div>
         </div>
 
-        <!-- Right: Calendly Inline Widget -->
-        <div class="contact-form-side" style="padding:0;overflow:hidden;background:transparent;border:none;box-shadow:none;">
+        <!-- Right: Calendly Inline Widget (desktop) / Popup CTA (mobile) -->
+        <div class="contact-form-side" style="padding:0;background:transparent;border:none;box-shadow:none;">
+          <!-- Inline widget shown on desktop -->
           <div
-            class="calendly-inline-widget"
+            class="calendly-inline-widget calendly-desktop-only"
             data-url="https://calendly.com/njdevelopments123/30min?hide_gdpr_banner=1&primary_color=2a9d8f"
             style="min-width:280px;height:700px;">
+          </div>
+          <!-- Popup button shown on mobile -->
+          <div class="calendly-mobile-cta">
+            <p>Ready to get started? Pick a time that works for you.</p>
+            <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/njdevelopments123/30min?hide_gdpr_banner=1&primary_color=2a9d8f'});return false;" class="btn btn-primary btn-large" style="width:100%;text-align:center;display:block;">
+              Pick a Time &rarr;
+            </a>
+            <p style="font-size:0.85rem;color:#888;margin-top:12px;text-align:center;">30 minutes &middot; Free &middot; No commitment</p>
           </div>
         </div>
 

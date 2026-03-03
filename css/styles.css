@@ -1452,6 +1452,28 @@ h3 { font-size: 1.25rem; }
   .contact-form-side {
     padding: 28px 20px;
   }
+  .calendly-desktop-only {
+    display: none !important;
+  }
+  .calendly-mobile-cta {
+    display: block;
+    background: var(--white);
+    border-radius: var(--radius);
+    border: 1px solid var(--gray-100);
+    padding: 32px 24px;
+    text-align: center;
+  }
+  .calendly-mobile-cta > p:first-child {
+    font-size: 1.05rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: var(--dark);
+  }
+}
+@media (min-width: 769px) {
+  .calendly-mobile-cta {
+    display: none !important;
+  }
 }
 
 /* --- Contact Form --- */
