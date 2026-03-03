@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>NJ Developments — Digital Agency for Growing Businesses</title>
-  <meta name="description" content="NJ Developments builds websites, custom software, and handles SEO & marketing for small-medium businesses. Get a free consultation today.">
+  <meta name="description" content="NJ Developments builds websites, custom software, and handles SEO &amp; marketing for small-medium businesses. Get a free consultation today.">
+  <meta name="keywords" content="web development Connecticut, custom software development, SEO services, digital marketing agency, website design small business, NJ Developments, web agency CT">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="canonical" href="https://njdevelopmentsales.web.app/">
 
@@ -23,6 +24,8 @@
   <meta name="twitter:description" content="Custom websites, software, SEO & marketing solutions for small-medium businesses. Get a free consultation today.">
   <meta name="twitter:image" content="https://njdevelopmentsales.web.app/images/logo.png">
 
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//fonts.gstatic.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -33,7 +36,8 @@
   <link rel="icon" href="images/logo.png" type="image/png">
   <link rel="apple-touch-icon" href="images/logo.png">
   <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="css/styles.css?v=2">
+  <link rel="preload" href="images/logo.png" as="image">
+  <link rel="stylesheet" href="css/styles.css?v=3">
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -72,7 +76,10 @@
           "email": "Njdevelopments123@gmail.com",
           "availableLanguage": "English"
         },
-        "sameAs": []
+        "sameAs": [
+          "https://www.facebook.com/njdevelopments",
+          "https://www.instagram.com/njdevelopments"
+        ]
       },
       {
         "@type": "WebSite",
@@ -205,6 +212,7 @@
   <!-- Hero -->
   <section class="hero">
     <div class="container">
+      <span class="hero-mobile-badge">&#9679; Available Now</span>
       <h1>Websites, Custom Software &<br><span class="gradient-text">Digital Growth for Your Business</span></h1>
       <p>From stunning websites to powerful software and marketing that converts — we help businesses launch, grow, and scale.</p>
       <div class="hero-buttons">
@@ -349,6 +357,15 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=2"></script>
+  <!-- Mobile Bottom CTA Bar -->
+  <div class="mobile-cta-bar">
+    <a href="tel:8609877606" class="mobile-cta-call">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.63 3.38 2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6.29 6.29l.97-.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call Us
+    </a>
+    <a href="contact.html" class="mobile-cta-start">Get Started &rarr;</a>
+  </div>
+
+  <script src="js/main.js?v=3"></script>
 </body>
 </html>

@@ -2,5 +2,14 @@ User-agent: *
 Allow: /
 Disallow: /firebase.json
 Disallow: /.firebaserc
+Disallow: /manifest.json
+
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 5
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 10
 
 Sitemap: https://njdevelopmentsales.web.app/sitemap.xml

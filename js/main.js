@@ -20,9 +20,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   window.addEventListener('scroll', updateProgress, { passive: true });
 
-  // --- Parallax on hero/page headers ---
+  // --- Parallax on hero/page headers (desktop only, respects reduced motion) ---
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const isMobile = window.innerWidth < 768;
   const parallaxEls = document.querySelectorAll('.hero, .page-header');
-  if (parallaxEls.length > 0) {
+  if (parallaxEls.length > 0 && !prefersReducedMotion && !isMobile) {
     window.addEventListener('scroll', () => {
       const scrollY = window.scrollY;
       parallaxEls.forEach(el => {
