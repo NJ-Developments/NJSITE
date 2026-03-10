@@ -37,7 +37,7 @@
   <link rel="apple-touch-icon" href="images/logo.png">
   <link rel="manifest" href="manifest.json">
   <link rel="preload" href="images/logo.png" as="image">
-  <link rel="stylesheet" href="css/styles.css?v=3">
+  <link rel="stylesheet" href="css/styles.css?v=4">
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 
   <!-- Structured Data -->
@@ -209,57 +209,241 @@
 
   <main id="main-content">
 
-  <!-- Hero -->
-  <section class="hero">
+  <!-- Hero — Dark -->
+  <section class="hero-dark">
+    <div class="hero-grid-bg" aria-hidden="true"></div>
+    <div class="hero-glow hero-glow-1" aria-hidden="true"></div>
+    <div class="hero-glow hero-glow-2" aria-hidden="true"></div>
     <div class="container">
-      <span class="hero-mobile-badge">&#9679; Available Now</span>
-      <h1>Websites & AI Tools Built for<br><span class="gradient-text">Contractors Who Want More Jobs</span></h1>
-      <p>We help HVAC techs, roofers, electricians, and service contractors get found online, never miss a call, and book more work.</p>
-      <div class="hero-buttons">
-        <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/jamiahbartlett-pate/30-min-meeting-1?hide_gdpr_banner=1&primary_color=2a9d8f'});return false;" class="btn btn-primary">Book a Free Call</a>
-        <a href="services.html" class="btn btn-outline">Our Services</a>
+      <div class="hero-content">
+        <span class="hero-badge">Built for Contractors</span>
+        <h1>Your Website Should<br>Be Booking You <span class="hero-highlight">Jobs</span></h1>
+        <p>We build websites, AI voice agents, and automated systems that help HVAC techs, roofers, and electricians in Connecticut get found, never miss a call, and close more work.</p>
+        <div class="hero-buttons">
+          <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/jamiahbartlett-pate/30-min-meeting-1?hide_gdpr_banner=1&primary_color=2a9d8f'});return false;" class="btn btn-glow">Book a Free Call</a>
+          <a href="portfolio.html" class="btn btn-ghost">See Our Work &#8594;</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Services Overview -->
+  <!-- Stats Bar -->
+  <section class="stats-bar">
+    <div class="container">
+      <div class="stats-row">
+        <div class="stat-item">
+          <span class="stat-number">6+</span>
+          <span class="stat-label">Sites Launched</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">1-2 wk</span>
+          <span class="stat-label">Average Build</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">24/7</span>
+          <span class="stat-label">AI Answering</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Custom Built</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Logo Marquee -->
+  <section class="logo-marquee">
+    <div class="container">
+      <span class="marquee-label">Trusted by businesses across Connecticut</span>
+    </div>
+    <div class="marquee-track">
+      <div class="marquee-inner">
+        <div class="marquee-logo"><img src="images/clients/cedar-logo.png" alt="Cedar Stone Tree Works" loading="lazy"></div>
+        <div class="marquee-logo"><img src="images/clients/golf-cove.jpg" alt="Golf Cove" loading="lazy"></div>
+        <div class="marquee-logo"><img src="images/clients/katz-logo.jpg" alt="Katz" loading="lazy"></div>
+        <div class="marquee-logo"><img src="images/clients/rbm-logo.png" alt="RBM Brokerage" loading="lazy"></div>
+        <div class="marquee-logo"><img src="images/clients/grow-logo.png" alt="Grow Together Inc" loading="lazy"></div>
+        <div class="marquee-logo"><img src="images/clients/ice-cream-productions.png" alt="Ice Cream Productions" loading="lazy"></div>
+        <!-- Duplicate for seamless scroll -->
+        <div class="marquee-logo"><img src="images/clients/cedar-logo.png" alt="Cedar Stone Tree Works" loading="lazy"></div>
+        <div class="marquee-logo"><img src="images/clients/golf-cove.jpg" alt="Golf Cove" loading="lazy"></div>
+        <div class="marquee-logo"><img src="images/clients/katz-logo.jpg" alt="Katz" loading="lazy"></div>
+        <div class="marquee-logo"><img src="images/clients/rbm-logo.png" alt="RBM Brokerage" loading="lazy"></div>
+        <div class="marquee-logo"><img src="images/clients/grow-logo.png" alt="Grow Together Inc" loading="lazy"></div>
+        <div class="marquee-logo"><img src="images/clients/ice-cream-productions.png" alt="Ice Cream Productions" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Showcase -->
   <section class="section">
     <div class="container">
       <div class="section-header fade-in">
-        <span class="section-label">What We Do</span>
-        <h2>Everything You Need to Get More Jobs</h2>
-        <p>Websites, AI tools, and automation built specifically for service contractors.</p>
+        <span class="section-label">What We Build</span>
+        <h2>The Full Stack for Contractor Growth</h2>
+        <p>Websites alone don't cut it. We build the entire system that turns searches into phone calls and calls into booked jobs.</p>
       </div>
-      <div class="cards-grid">
-        <div class="card fade-in">
-          <div class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
-          <h3>Contractor Websites</h3>
-          <p>Professional sites that show up on Google and make homeowners pick up the phone.</p>
+
+      <div class="services-showcase">
+        <div class="service-feature fade-in">
+          <div class="sf-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <div class="sf-content">
+            <h3>Contractor Websites</h3>
+            <p>Clean, fast, mobile-first sites that rank on Google and make homeowners call you. No templates. Hand-coded for speed and SEO from day one.</p>
+          </div>
         </div>
-        <div class="card fade-in">
-          <div class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
-          <h3>AI Voice Agent</h3>
-          <p>Never miss a call. AI picks up when you can't and texts you the lead details.</p>
+
+        <div class="service-feature fade-in">
+          <div class="sf-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div class="sf-content">
+            <h3>AI Voice Agent</h3>
+            <p>Never miss a lead. Our AI picks up your phone 24/7, captures caller info, and texts you the details. You call back when you're ready, not when you're on a roof.</p>
+          </div>
         </div>
-        <div class="card fade-in">
-          <div class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
-          <h3>SEO &amp; Google</h3>
-          <p>Show up when homeowners search for your trade in your area.</p>
+
+        <div class="service-feature fade-in">
+          <div class="sf-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div class="sf-content">
+            <h3>Review &amp; Follow-Up Automation</h3>
+            <p>After every job, we automatically text your customer for a Google review. More reviews means more trust, more calls, and higher rankings.</p>
+          </div>
         </div>
-        <div class="card fade-in">
-          <div class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-          <h3>Review &amp; Follow-Up Automation</h3>
-          <p>Automatically collect Google reviews and follow up with every lead so none slip through.</p>
+
+        <div class="service-feature fade-in">
+          <div class="sf-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+          <div class="sf-content">
+            <h3>SEO &amp; Google Maps</h3>
+            <p>Show up when someone in your area searches "roofer near me" or "HVAC repair [your town]." We optimize everything so Google puts you in front of the right people.</p>
+          </div>
         </div>
       </div>
+
       <div style="text-align:center;margin-top:48px;" class="fade-in">
         <a href="services.html" class="btn btn-outline">View All Services &#8594;</a>
       </div>
     </div>
   </section>
 
-  <!-- FAQ Section -->
+  <!-- Featured Work -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label" style="color:rgba(42,157,143,0.9);">Our Work</span>
+        <h2 style="color:#fff;">Sites We've Built for Real Businesses</h2>
+        <p style="color:rgba(255,255,255,0.6);">Not mockups. Live sites generating leads right now.</p>
+      </div>
+      <div class="featured-grid">
+        <a href="https://cedarstone-treeworks.web.app" target="_blank" rel="noopener" class="featured-card fade-in">
+          <div class="featured-img">
+            <img src="images/cedar-preview.png" alt="Cedar Stone Tree Works website" loading="lazy">
+          </div>
+          <div class="featured-info">
+            <h3>Cedar Stone Tree Works</h3>
+            <p>Tree service site that's already generating leads from the contact form. Built in under 2 weeks.</p>
+            <div class="featured-tags">
+              <span class="tag">Website</span>
+              <span class="tag">SEO</span>
+              <span class="tag">Contact Form</span>
+            </div>
+          </div>
+        </a>
+        <a href="https://gti-website-org.web.app" target="_blank" rel="noopener" class="featured-card fade-in">
+          <div class="featured-img">
+            <iframe src="https://gti-website-org.web.app" loading="lazy" title="Grow Together Inc preview" tabindex="-1"></iframe>
+          </div>
+          <div class="featured-info">
+            <h3>Grow Together Inc</h3>
+            <p>Nonprofit community organization. Full site with events, board directory, press articles, and donation integration.</p>
+            <div class="featured-tags">
+              <span class="tag">Website</span>
+              <span class="tag">Press</span>
+              <span class="tag">Events</span>
+            </div>
+          </div>
+        </a>
+        <a href="https://rbmbrokerage.com" target="_blank" rel="noopener" class="featured-card fade-in">
+          <div class="featured-img">
+            <iframe src="https://rbmbrokerage.com" loading="lazy" title="RBM Brokerage preview" tabindex="-1"></iframe>
+          </div>
+          <div class="featured-info">
+            <h3>RBM Brokerage</h3>
+            <p>Real estate brokerage with admin panel for managing property listings. Custom CMS, no monthly software fees.</p>
+            <div class="featured-tags">
+              <span class="tag">Website</span>
+              <span class="tag">Admin Panel</span>
+              <span class="tag">Real Estate</span>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div style="text-align:center;margin-top:48px;" class="fade-in">
+        <a href="portfolio.html" class="btn btn-ghost">View Full Portfolio &#8594;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">How It Works</span>
+        <h2>From Call to Launch in 4 Steps</h2>
+        <p>Simple process, no runaround. You tell us what you need, we build it.</p>
+      </div>
+      <div class="process-timeline">
+        <div class="process-card fade-in">
+          <div class="pc-number">1</div>
+          <h3>Discovery Call</h3>
+          <p>30 minutes. We learn about your business, goals, and what you need to start booking more work.</p>
+        </div>
+        <div class="process-card fade-in">
+          <div class="pc-number">2</div>
+          <h3>Strategy &amp; Design</h3>
+          <p>We map out the site, pick the right tools, and show you a design before we build anything.</p>
+        </div>
+        <div class="process-card fade-in">
+          <div class="pc-number">3</div>
+          <h3>Build &amp; Launch</h3>
+          <p>Hand-coded, tested, and live within 1-2 weeks. You get a real website, not a drag-and-drop template.</p>
+        </div>
+        <div class="process-card fade-in">
+          <div class="pc-number">4</div>
+          <h3>Grow &amp; Support</h3>
+          <p>Ongoing SEO, AI tools, and monthly support. We keep things running so you can focus on the job site.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial -->
   <section class="section section-gray">
+    <div class="container">
+      <div class="testimonial-block fade-in">
+        <svg class="testimonial-quote" width="48" height="48" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z" fill="currentColor"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z" fill="currentColor"/></svg>
+        <blockquote>
+          <p>"Extremely happy with how our website turned out. It's better than most of my competitors' sites, and we've already gotten leads from the contact form. These guys know what they're doing."</p>
+        </blockquote>
+        <div class="testimonial-author">
+          <img src="images/clients/cedar-logo.png" alt="Cedar Stone Tree Works" class="testimonial-avatar" loading="lazy">
+          <div>
+            <strong>Merick</strong>
+            <span>Owner, Cedar Stone Tree Works</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section">
     <div class="container">
       <div class="section-header fade-in">
         <span class="section-label">FAQ</span>
@@ -364,6 +548,6 @@
   </div>
 
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-  <script src="js/main.js?v=3"></script>
+  <script src="js/main.js?v=4"></script>
 </body>
 </html>
