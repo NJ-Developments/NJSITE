@@ -1734,6 +1734,24 @@ h3 { font-size: 1.25rem; }
   transform: translateY(-2px);
 }
 
+/* --- Blog --- */
+.blog-empty {
+  text-align: center;
+  padding: 80px 24px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+.blog-empty h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 0.75rem;
+}
+.blog-empty p {
+  color: var(--gray);
+  line-height: 1.7;
+}
+
 /* --- Footer --- */
 .footer {
   background: var(--dark);
