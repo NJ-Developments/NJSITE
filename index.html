@@ -256,6 +256,10 @@
           <span class="stat-number">100%</span>
           <span class="stat-label">Custom Built</span>
         </div>
+        <div class="stat-item">
+          <span class="stat-number">1,000+</span>
+          <span class="stat-label">Active Users</span>
+        </div>
       </div>
     </div>
   </section>
@@ -265,23 +269,23 @@
     <div class="container">
       <span class="marquee-label">Trusted by businesses across Connecticut</span>
     </div>
-    <div class="marquee-track">
-      <div class="marquee-inner">
-        <div class="marquee-logo"><img src="images/clients/cedar-logo.png" alt="Cedar Stone Tree Works" loading="lazy"></div>
-        <div class="marquee-logo"><img src="images/clients/golf-cove.jpg" alt="Golf Cove" loading="lazy"></div>
-        <div class="marquee-logo"><img src="images/clients/katz-logo.jpg" alt="Katz" loading="lazy"></div>
-        <div class="marquee-logo"><img src="images/clients/rbm-logo.png" alt="RBM Brokerage" loading="lazy"></div>
-        <div class="marquee-logo"><img src="images/clients/grow-logo.png" alt="Grow Together Inc" loading="lazy"></div>
-        <div class="marquee-logo"><img src="images/clients/ice-cream-productions.png" alt="Ice Cream Productions" loading="lazy"></div>
-        <div class="marquee-logo"><img src="images/clients/cbna-logo.jpeg" alt="Connecticut Business Networking Association" loading="lazy"></div>
-        <!-- Duplicate for seamless scroll -->
-        <div class="marquee-logo"><img src="images/clients/cedar-logo.png" alt="Cedar Stone Tree Works" loading="lazy"></div>
-        <div class="marquee-logo"><img src="images/clients/golf-cove.jpg" alt="Golf Cove" loading="lazy"></div>
-        <div class="marquee-logo"><img src="images/clients/katz-logo.jpg" alt="Katz" loading="lazy"></div>
-        <div class="marquee-logo"><img src="images/clients/rbm-logo.png" alt="RBM Brokerage" loading="lazy"></div>
-        <div class="marquee-logo"><img src="images/clients/grow-logo.png" alt="Grow Together Inc" loading="lazy"></div>
-        <div class="marquee-logo"><img src="images/clients/ice-cream-productions.png" alt="Ice Cream Productions" loading="lazy"></div>
-        <div class="marquee-logo"><img src="images/clients/cbna-logo.jpeg" alt="Connecticut Business Networking Association" loading="lazy"></div>
+    <div class="marquee-track-wrapper" id="clientsWrapper">
+      <div class="marquee-row marquee-row-forward" id="clientsTrackTop">
+        <img src="images/clients/cedar-logo.png" alt="Cedar Stone Tree Works" crossorigin="anonymous">
+        <img src="images/clients/katz-logo.jpg" alt="Katz AI" crossorigin="anonymous">
+        <img src="images/clients/grow-logo.png" alt="Grow Together Inc" crossorigin="anonymous">
+        <img src="images/clients/cbna-logo.jpeg" alt="CBNA" crossorigin="anonymous">
+        <img src="images/clients/golf-cove.jpg" alt="Golf Cove" crossorigin="anonymous">
+        <img src="images/clients/rbm-logo.png" alt="RBM Brokerage" crossorigin="anonymous">
+        <img src="images/clients/ice-cream-productions.png" alt="Ice Cream Productions" crossorigin="anonymous">
+        <!-- duplicate set for seamless loop -->
+        <img src="images/clients/cedar-logo.png" alt="Cedar Stone Tree Works" crossorigin="anonymous">
+        <img src="images/clients/katz-logo.jpg" alt="Katz AI" crossorigin="anonymous">
+        <img src="images/clients/grow-logo.png" alt="Grow Together Inc" crossorigin="anonymous">
+        <img src="images/clients/cbna-logo.jpeg" alt="CBNA" crossorigin="anonymous">
+        <img src="images/clients/golf-cove.jpg" alt="Golf Cove" crossorigin="anonymous">
+        <img src="images/clients/rbm-logo.png" alt="RBM Brokerage" crossorigin="anonymous">
+        <img src="images/clients/ice-cream-productions.png" alt="Ice Cream Productions" crossorigin="anonymous">
       </div>
     </div>
   </section>
@@ -561,5 +565,100 @@
 
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
   <script src="js/main.js?v=4"></script>
+  <script>
+  /* Auto-trim whitespace from client logos — matched from CTBuisness/CBNA */
+  const trimCache = new Map();
+  function autoTrimImage(img) {
+    try {
+      const origSrc = img.getAttribute('src');
+      if (trimCache.has(origSrc)) {
+        img.src = trimCache.get(origSrc);
+        return;
+      }
+
+      const canvas = document.createElement('canvas');
+      const ctx = canvas.getContext('2d');
+      canvas.width = img.naturalWidth;
+      canvas.height = img.naturalHeight;
+      ctx.drawImage(img, 0, 0);
+
+      const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+      const data = imageData.data;
+      const w = canvas.width, h = canvas.height;
+      const threshold = 245;
+
+      let top = h, left = w, bottom = 0, right = 0;
+      for (let y = 0; y < h; y++) {
+        for (let x = 0; x < w; x++) {
+          const i = (y * w + x) * 4;
+          const a = data[i + 3];
+          if (a < 10) continue;
+          const r = data[i], g = data[i + 1], b = data[i + 2];
+          if (r >= threshold && g >= threshold && b >= threshold) continue;
+          if (y < top) top = y;
+          if (y > bottom) bottom = y;
+          if (x < left) left = x;
+          if (x > right) right = x;
+        }
+      }
+
+      const contentArea = (right - left + 1) * (bottom - top + 1);
+      if (contentArea < w * h * 0.1 || bottom <= top || right <= left) return;
+
+      const padX = Math.round((right - left) * 0.05);
+      const padY = Math.round((bottom - top) * 0.05);
+      const cx = Math.max(0, left - padX);
+      const cy = Math.max(0, top - padY);
+      const cw = Math.min(w - cx, right - left + 1 + padX * 2);
+      const ch = Math.min(h - cy, bottom - top + 1 + padY * 2);
+
+      const trimmed = document.createElement('canvas');
+      trimmed.width = cw;
+      trimmed.height = ch;
+      trimmed.getContext('2d').drawImage(canvas, cx, cy, cw, ch, 0, 0, cw, ch);
+      const dataURL = trimmed.toDataURL();
+      img.src = dataURL;
+      trimCache.set(origSrc, dataURL);
+    } catch (e) {
+      // CORS or other error — display logo as-is
+    }
+  }
+
+  (function() {
+    const wrapper = document.getElementById('clientsWrapper');
+    const track = document.getElementById('clientsTrackTop');
+    if (!wrapper) return;
+
+    // Wait for all images to load and auto-trim before showing
+    const imgs = wrapper.querySelectorAll('img');
+    const imgPromises = Array.from(imgs).map(img => new Promise(resolve => {
+      const done = () => { autoTrimImage(img); resolve(); };
+      if (img.complete && img.naturalWidth) { done(); }
+      else {
+        img.addEventListener('load', done);
+        img.addEventListener('error', resolve);
+      }
+    }));
+
+    Promise.all(imgPromises).then(() => {
+      wrapper.classList.add('ready');
+    });
+    setTimeout(() => wrapper.classList.add('ready'), 4000);
+
+    // Pause on press (mouse + touch)
+    const pause = () => {
+      track.style.animationPlayState = 'paused';
+    };
+    const resume = () => {
+      track.style.animationPlayState = 'running';
+    };
+    wrapper.addEventListener('mousedown', pause);
+    wrapper.addEventListener('mouseup', resume);
+    wrapper.addEventListener('mouseleave', resume);
+    wrapper.addEventListener('touchstart', pause, { passive: true });
+    wrapper.addEventListener('touchend', resume);
+    wrapper.addEventListener('touchcancel', resume);
+  })();
+  </script>
 </body>
 </html>

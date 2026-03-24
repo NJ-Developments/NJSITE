@@ -682,61 +682,54 @@ h3 { font-size: 1.25rem; }
 
 /* --- Logo Marquee --- */
 .logo-marquee {
-  padding: 40px 0;
-  background: var(--white);
-  border-bottom: 1px solid var(--gray-100);
-  overflow: hidden;
+  padding: 48px 0;
+  background: var(--gray-50);
+  border-top: 1px solid var(--gray-200);
+  border-bottom: 1px solid var(--gray-200);
 }
 
-.marquee-track {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
-}
-
-.marquee-inner {
+.marquee-track-wrapper {
   display: flex;
-  align-items: center;
-  gap: 64px;
-  width: max-content;
-  animation: marquee-scroll 40s linear infinite;
+  overflow: hidden;
+  contain: layout;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
-
-.marquee-track:hover .marquee-inner {
-  animation-play-state: paused;
-}
-
-.marquee-logo {
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 160px;
-  height: 80px;
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.marquee-logo:hover {
-  transform: scale(1.08);
-}
-
-.marquee-logo img {
-  max-height: 100%;
-  max-width: 100%;
-  width: auto;
-  height: auto;
-  object-fit: contain;
+.marquee-track-wrapper.ready {
+  opacity: 1;
 }
 
 @keyframes marquee-scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.marquee-row {
+  display: flex;
+  gap: 48px;
+  align-items: center;
+  width: max-content;
+  will-change: transform;
+}
+
+.marquee-row-forward {
+  animation: marquee-scroll 30s linear infinite;
+  animation-play-state: paused;
+}
+.marquee-row.running {
+  animation-play-state: running;
+}
+.marquee-row.paused {
+  animation-play-state: paused;
+}
+
+.marquee-row img {
+  flex-shrink: 0;
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  backface-visibility: hidden;
 }
 
 /* --- Portfolio Header --- */
@@ -1947,15 +1940,17 @@ h3 { font-size: 1.25rem; }
   .cta-banner p {
     font-size: 1rem;
   }
-  .marquee-logo {
-    width: 120px;
-    height: 60px;
+  .marquee-row img {
+    height: 56px;
   }
-  .marquee-inner {
-    gap: 40px;
+  .marquee-row {
+    gap: 32px;
+  }
+  .marquee-row-forward {
+    animation-duration: 16s;
   }
   .logo-marquee {
-    padding: 24px 0;
+    padding: 32px 0;
   }
   .portfolio-preview {
     height: 180px;
@@ -2179,12 +2174,14 @@ h3 { font-size: 1.25rem; }
     font-size: 0.9rem;
     word-break: break-word;
   }
-  .marquee-logo {
-    width: 100px;
-    height: 50px;
+  .marquee-row img {
+    height: 40px;
   }
-  .marquee-inner {
-    gap: 28px;
+  .marquee-row {
+    gap: 24px;
+  }
+  .marquee-row-forward {
+    animation-duration: 14s;
   }
   .multi-select-dropdown {
     max-height: 200px;

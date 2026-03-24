@@ -230,4 +230,38 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // --- Logo marquee ---
+  const marqueeWrapper = document.getElementById('clientsWrapper');
+  if (marqueeWrapper) {
+    const row = document.getElementById('clientsTrackTop');
+    const rows = [row];
+    const imgs = marqueeWrapper.querySelectorAll('img');
+
+    function startMarquee() {
+      rows.forEach(r => r.classList.add('running'));
+      marqueeWrapper.classList.add('ready');
+    }
+
+    // Wait for all images to load, then start (with 4s safety timeout)
+    const imgPromises = Array.from(imgs).map(img => new Promise(resolve => {
+      if (img.complete && img.naturalWidth) resolve();
+      else {
+        img.addEventListener('load', resolve);
+        img.addEventListener('error', resolve);
+      }
+    }));
+    Promise.all(imgPromises).then(startMarquee);
+    setTimeout(startMarquee, 4000);
+
+    // Pause on press (mouse + touch)
+    const pause = () => rows.forEach(r => r.classList.add('paused'));
+    const resume = () => rows.forEach(r => r.classList.remove('paused'));
+    marqueeWrapper.addEventListener('mousedown', pause);
+    marqueeWrapper.addEventListener('mouseup', resume);
+    marqueeWrapper.addEventListener('mouseleave', resume);
+    marqueeWrapper.addEventListener('touchstart', pause, { passive: true });
+    marqueeWrapper.addEventListener('touchend', resume);
+    marqueeWrapper.addEventListener('touchcancel', resume);
+  }
+
 });
