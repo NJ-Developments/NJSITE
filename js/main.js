@@ -253,11 +253,10 @@ document.addEventListener('DOMContentLoaded', () => {
     Promise.all(imgPromises).then(startMarquee);
     setTimeout(startMarquee, 4000);
 
-    // Pause on press (mouse + touch)
+    // Pause on hover (mouse + touch)
     const pause = () => rows.forEach(r => r.classList.add('paused'));
     const resume = () => rows.forEach(r => r.classList.remove('paused'));
-    marqueeWrapper.addEventListener('mousedown', pause);
-    marqueeWrapper.addEventListener('mouseup', resume);
+    marqueeWrapper.addEventListener('mouseenter', pause);
     marqueeWrapper.addEventListener('mouseleave', resume);
     marqueeWrapper.addEventListener('touchstart', pause, { passive: true });
     marqueeWrapper.addEventListener('touchend', resume);
