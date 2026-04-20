@@ -1,0 +1,39 @@
+{
+  "$schema": "https://modelcontextprotocol.io/schema/server-card/v1.json",
+  "version": "1.0",
+  "name": "nj-developments",
+  "title": "NJ Developments Public Info",
+  "description": "Read-only public information about NJ Developments — services, portfolio, pricing, contact. No authentication required.",
+  "provider": {
+    "name": "NJ Developments LLC",
+    "url": "https://nj-developments.com"
+  },
+  "status": "planned",
+  "capabilities": {
+    "resources": true,
+    "tools": false,
+    "prompts": false
+  },
+  "resources": [
+    {
+      "uri": "https://nj-developments.com/llms.txt",
+      "name": "Site Summary",
+      "description": "Plain-text summary of NJ Developments for AI agents.",
+      "mimeType": "text/markdown"
+    },
+    {
+      "uri": "https://nj-developments.com/sitemap.xml",
+      "name": "Sitemap",
+      "description": "Full sitemap of nj-developments.com.",
+      "mimeType": "application/xml"
+    },
+    {
+      "uri": "https://nj-developments.com/.well-known/agent-skills.json",
+      "name": "Agent Skills",
+      "description": "Skills this site exposes to AI agents (booking, inquiry, browsing).",
+      "mimeType": "application/json"
+    }
+  ],
+  "contact": "https://nj-developments.com/contact",
+  "notes": "This card describes static discoverable resources. A live MCP endpoint may be added in a future release."
+}
