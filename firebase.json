@@ -32,6 +32,10 @@
           {
             "key": "Permissions-Policy",
             "value": "camera=(), microphone=(), geolocation=()"
+          },
+          {
+            "key": "Link",
+            "value": "<https://nj-developments.com/sitemap.xml>; rel=\"sitemap\"; type=\"application/xml\", <https://nj-developments.com/llms.txt>; rel=\"alternate\"; type=\"text/markdown\"; title=\"LLM-friendly summary\", <https://nj-developments.com/.well-known/agent-skills.json>; rel=\"service-desc\"; type=\"application/json\""
           }
         ]
       },
@@ -85,6 +89,32 @@
           {
             "key": "Content-Type",
             "value": "application/manifest+json"
+          }
+        ]
+      },
+      {
+        "source": "llms.txt",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=86400"
+          },
+          {
+            "key": "Content-Type",
+            "value": "text/markdown; charset=utf-8"
+          }
+        ]
+      },
+      {
+        "source": ".well-known/**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=86400"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json; charset=utf-8"
           }
         ]
       }
