@@ -1,0 +1,48 @@
+{
+  "$schema": "https://agentskills.org/schema/v1.json",
+  "version": "1.0",
+  "name": "NJ Developments",
+  "description": "Connecticut web development and business automation studio serving service contractors.",
+  "provider": {
+    "name": "NJ Developments LLC",
+    "url": "https://nj-developments.com",
+    "contact": "https://nj-developments.com/contact"
+  },
+  "skills": [
+    {
+      "id": "book-consultation",
+      "name": "Book a Free Consultation",
+      "description": "Schedule a 30-minute discovery call with NJ Developments to discuss a website, AI voice agent, or automation project.",
+      "url": "https://nj-developments.com/contact",
+      "type": "calendar-booking"
+    },
+    {
+      "id": "service-inquiry",
+      "name": "Service Inquiry",
+      "description": "Submit a contact form with project details (website build, AI voice agent, review automation, SEO, lead follow-up, custom portal, or marketing).",
+      "url": "https://nj-developments.com/contact",
+      "type": "contact-form"
+    },
+    {
+      "id": "browse-services",
+      "name": "Browse Services",
+      "description": "Full catalog of services for CT contractors.",
+      "url": "https://nj-developments.com/services",
+      "type": "information"
+    },
+    {
+      "id": "browse-portfolio",
+      "name": "Browse Portfolio",
+      "description": "See past client work across HVAC, roofing, electrical, tree, and golf-course verticals.",
+      "url": "https://nj-developments.com/portfolio",
+      "type": "information"
+    },
+    {
+      "id": "read-blog",
+      "name": "Read Blog",
+      "description": "Articles on contractor marketing, AI voice agents, Google reviews, and local SEO.",
+      "url": "https://nj-developments.com/blog",
+      "type": "information"
+    }
+  ]
+}

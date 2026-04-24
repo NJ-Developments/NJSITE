@@ -1,3 +1,10 @@
+# NJ Developments — robots.txt
+# Content Signals (https://github.com/ai-robots-txt/ai.robots.txt)
+# Human search is allowed. AI training without license is not.
+Content-Usage: search
+Content-Usage: ai-input=no
+Content-Usage: ai-train=no
+
 User-agent: *
 Allow: /
 Disallow: /firebase.json
@@ -11,5 +18,45 @@ Crawl-delay: 5
 User-agent: Bingbot
 Allow: /
 Crawl-delay: 10
+
+# AI crawlers — allowed for search/indexing, blocked from training ingestion.
+# Per RFC 9309 + emerging AI bot conventions.
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Allow: /
+Crawl-delay: 10
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: ImagesiftBot
+Disallow: /
+
+User-agent: Omgilibot
+Disallow: /
 
 Sitemap: https://nj-developments.com/sitemap.xml
