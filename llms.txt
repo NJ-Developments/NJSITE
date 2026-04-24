@@ -22,6 +22,11 @@ NJ Developments LLC builds fast, conversion-focused websites and layers AI autom
 - Services detail: https://nj-developments.com/services
 - Blog: https://nj-developments.com/blog
 
+## Featured guides
+
+- [How to Hire a Web Designer in Connecticut — 2026 Buyer's Guide](https://nj-developments.com/blog-how-to-hire-web-designer-connecticut): Practical guide to pricing tiers, what to ask, red flags, and how to match a CT web designer to your scope.
+- [Web Design Agency Serving Hartford, New Haven, Stamford & All of CT](https://nj-developments.com/blog-web-design-connecticut-towns): Town-by-town breakdown of CT web design coverage.
+
 ## Key pages
 
 - [Home](https://nj-developments.com/): Overview and primary CTAs.
