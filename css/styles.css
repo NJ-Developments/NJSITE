@@ -707,10 +707,12 @@ h3 { font-size: 1.25rem; }
 }
 .marquee-row {
   display: flex;
-  gap: 48px;
   align-items: center;
   width: max-content;
   will-change: transform;
+}
+.marquee-row > a {
+  margin-right: 48px;
 }
 
 .marquee-row-forward {
@@ -1953,8 +1955,8 @@ h3 { font-size: 1.25rem; }
   .marquee-row img {
     height: 56px;
   }
-  .marquee-row {
-    gap: 32px;
+  .marquee-row > a {
+    margin-right: 32px;
   }
   .marquee-row-forward {
     animation-duration: 16s;
@@ -2187,8 +2189,8 @@ h3 { font-size: 1.25rem; }
   .marquee-row img {
     height: 40px;
   }
-  .marquee-row {
-    gap: 24px;
+  .marquee-row > a {
+    margin-right: 24px;
   }
   .marquee-row-forward {
     animation-duration: 14s;
