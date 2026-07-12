@@ -23,7 +23,11 @@
   <meta property="og:url" content="https://nj-developments.com/">
   <meta property="og:title" content="NJ Developments — Websites & AI Tools for Local Service Businesses in CT">
   <meta property="og:description" content="Websites, AI voice agents, and automated follow-up systems for local service businesses in Connecticut.">
-  <meta property="og:image" content="https://nj-developments.com/images/NJDev_Logo.png">
+  <meta property="og:image" content="https://nj-developments.com/images/og-image.jpg?v=2">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:alt" content="NJ Developments — Websites, AI Voice Agents &amp; Automation for Connecticut contractors">
   <meta property="og:site_name" content="NJ Developments">
   <meta property="og:locale" content="en_US">
 
@@ -31,14 +35,14 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="NJ Developments — Websites & AI Tools for Local Service Businesses in CT">
   <meta name="twitter:description" content="Websites, AI voice agents, and automated follow-up systems for local service businesses in Connecticut.">
-  <meta name="twitter:image" content="https://nj-developments.com/images/NJDev_Logo.png">
+  <meta name="twitter:image" content="https://nj-developments.com/images/og-image.jpg?v=2">
 
   <link rel="dns-prefetch" href="//fonts.googleapis.com">
   <link rel="dns-prefetch" href="//fonts.gstatic.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <meta name="theme-color" content="#1c3654">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#0a0e1a">
   <meta name="author" content="NJ Developments">
   <meta name="geo.region" content="US-CT">
   <meta name="geo.placename" content="Connecticut">
@@ -48,7 +52,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="manifest" href="manifest.json">
   <link rel="preload" href="images/NJDev_Logo.png" as="image">
-  <link rel="stylesheet" href="css/styles.css?v=5">
+  <link rel="stylesheet" href="css/styles.css?v=6">
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 
   <!-- Structured Data -->
@@ -63,7 +67,7 @@
         "url": "https://nj-developments.com/",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://nj-developments.com/images/NJDev_Logo.png",
+          "url": "https://nj-developments.com/images/og-image.jpg?v=2",
           "width": 512,
           "height": 512
         },
@@ -124,8 +128,8 @@
         "@id": "https://nj-developments.com/#business",
         "name": "NJ Developments",
         "url": "https://nj-developments.com/",
-        "logo": "https://nj-developments.com/images/NJDev_Logo.png",
-        "image": "https://nj-developments.com/images/NJDev_Logo.png",
+        "logo": "https://nj-developments.com/images/og-image.jpg?v=2",
+        "image": "https://nj-developments.com/images/og-image.jpg?v=2",
         "telephone": "+1-860-987-7606",
         "email": "Njdevelopments123@gmail.com",
         "priceRange": "$$",
@@ -199,7 +203,7 @@
 
   <a href="#main-content" class="skip-to-content">Skip to main content</a>
 
-  <!-- Navbar -->
+  <!-- Navbar (dark variant on dark hero) -->
   <nav class="navbar" aria-label="Main navigation">
     <div class="container">
       <a href="index.html" class="nav-logo"><img src="images/NJDev_Logo.png" alt="NJ Developments" class="nav-logo-img"></a>
@@ -208,7 +212,7 @@
         <a href="services.html">Services</a>
         <a href="portfolio.html">Portfolio</a>
         <a href="about.html">About</a>
-        <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/jamiahbartlett-pate/30-min-meeting-1?hide_gdpr_banner=1&primary_color=2a9d8f'});return false;" class="nav-cta">Get Started &#8594;</a>
+        <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/jamiahbartlett-pate/30-min-meeting-1?hide_gdpr_banner=1&primary_color=2a9d8f'});return false;" class="nav-cta">Book a Call &#8594;</a>
       </div>
       <button class="hamburger" aria-label="Toggle navigation">
         <span></span>
@@ -220,48 +224,215 @@
 
   <main id="main-content">
 
-  <!-- Hero — Dark -->
-  <section class="hero-dark">
-    <div class="hero-grid-bg" aria-hidden="true"></div>
-    <div class="hero-glow hero-glow-1" aria-hidden="true"></div>
-    <div class="hero-glow hero-glow-2" aria-hidden="true"></div>
+  <!-- Conversion Hero (split: copy + trust left, booking card right) -->
+  <section class="hero-dark hero-split">
+    <div class="hero-photo" aria-hidden="true"></div>
+    <div class="hero-scrim" aria-hidden="true"></div>
     <div class="container">
-      <div class="hero-content">
-        <span class="hero-badge">Built for Local Service Businesses</span>
-        <h1>Your Website Should<br>Be Booking You <span class="hero-highlight">Jobs</span></h1>
-        <p>We build websites, AI voice agents, and automated systems that help local service businesses in Connecticut get found, never miss a call, and close more work.</p>
-        <div class="hero-buttons">
-          <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/jamiahbartlett-pate/30-min-meeting-1?hide_gdpr_banner=1&primary_color=2a9d8f'});return false;" class="btn btn-glow">Book a Free Call</a>
-          <a href="portfolio.html" class="btn btn-ghost">See Our Work &#8594;</a>
+      <div class="hero-grid">
+
+        <div class="hero-copy">
+          <span class="hero-badge">Websites &middot; AI &middot; Automation &middot; Custom Software</span>
+          <h1>Your website should be<br><em>growing your business.</em></h1>
+          <p>NJ Developments builds high-converting websites, AI voice agents, and automated systems for ambitious businesses &mdash; so you get found, capture every lead, and never let one slip.</p>
+
+          <ul class="hero-trust-list">
+            <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.4 3.4L16 5.4" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Websites, AI &amp; automation under one roof</li>
+            <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.4 3.4L16 5.4" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Built in Connecticut &mdash; working everywhere</li>
+            <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.4 3.4L16 5.4" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Free strategy call, no obligation</li>
+          </ul>
+
+          <div class="hero-buttons">
+            <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/jamiahbartlett-pate/30-min-meeting-1?hide_gdpr_banner=1&primary_color=2a9d8f'});return false;" class="btn btn-glow">Book a Free Call</a>
+            <a href="tel:8609877606" class="btn btn-ghost btn-call"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3.5c.6 0 1.1.4 1.3 1l.85 2.9a1.4 1.4 0 0 1-.38 1.4L7.1 10.1a12 12 0 0 0 5.8 5.8l1.3-1.28a1.4 1.4 0 0 1 1.4-.38l2.9.85c.6.18 1 .73 1 1.35v2.2c0 1-.82 1.8-1.83 1.72A15.7 15.7 0 0 1 4.28 5.33 1.8 1.8 0 0 1 6 3.5z"/></svg>Call 860-987-7606</a>
+          </div>
         </div>
+
+        <div class="hero-form-card">
+          <div class="hff-head">
+            <h2 class="hff-title">Book a free strategy call</h2>
+            <p class="hff-sub">Tell us what you need and grab a time. 15 minutes, no pitch.</p>
+          </div>
+          <form id="hero-audit-form" class="hff-form" novalidate>
+            <div class="hff-field">
+              <label for="hf-name">Name</label>
+              <input id="hf-name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
+            </div>
+            <div class="hff-field">
+              <label for="hf-email">Email</label>
+              <input id="hf-email" name="email" type="email" autocomplete="email" placeholder="you@business.com" required>
+            </div>
+            <div class="hff-field">
+              <label for="hf-site">Website <span class="hff-opt">(optional)</span></label>
+              <input id="hf-site" name="website" type="text" autocomplete="url" placeholder="yourbusiness.com">
+            </div>
+            <div class="hff-field">
+              <label for="hf-need">What do you need?</label>
+              <select id="hf-need" name="need" required>
+                <option value="" disabled selected>Choose one&hellip;</option>
+                <option>A new or redesigned website</option>
+                <option>AI &amp; automation</option>
+                <option>SEO &amp; getting found</option>
+                <option>Not sure yet &mdash; help me figure it out</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-glow btn-block">Book my call &#8594;</button>
+            <p class="hff-note">Free &middot; 15 minutes &middot; No obligation</p>
+          </form>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Stats Bar -->
-  <section class="stats-bar">
+  <!-- Bento Services Showcase -->
+  <section class="section">
     <div class="container">
-      <div class="stats-row">
-        <div class="stat-item">
-          <span class="stat-number">6+</span>
-          <span class="stat-label">Sites Launched</span>
+      <div class="section-header fade-in">
+        <span class="section-label">What we build</span>
+        <h2>The full stack for <em class="serif-accent">business growth.</em></h2>
+        <p>Websites alone don't cut it. We build the entire system that turns searches into phone calls and calls into booked jobs.</p>
+      </div>
+
+      <div class="services-bento">
+        <!-- Large feature: Websites -->
+        <div class="bento bento-lg fade-in">
+          <span class="bento-eyebrow">Professional Websites</span>
+          <h3>Clean, fast, mobile-first sites that rank on Google and make homeowners call.</h3>
+          <p>Hand-coded for speed and SEO from day one. No templates, no bloat — just sites built to perform.</p>
+          <div class="bento-visual">
+            <div class="grid-pattern"></div>
+            <div class="glow"></div>
+            <div class="bento-browser">
+              <div class="bento-browser-bar">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="bento-browser-body">
+                <div class="bb-nav">
+                  <div class="bb-logo"></div>
+                  <div class="bb-nav-links">
+                    <span></span><span></span><span></span>
+                  </div>
+                  <div class="bb-nav-cta"></div>
+                </div>
+                <div class="bb-hero">
+                  <div class="bb-hero-text">
+                    <div class="bb-headline"></div>
+                    <div class="bb-sub short"></div>
+                    <div class="bb-cta"></div>
+                  </div>
+                  <div class="bb-hero-image">
+                    <div class="bb-img-bars">
+                      <span></span><span></span><span></span><span></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="stat-item">
-          <span class="stat-number">1-2 wk</span>
-          <span class="stat-label">Average Build</span>
+
+        <!-- AI Voice Agent — narrow with phone visual -->
+        <div class="bento bento-md fade-in hide-on-mobile">
+          <div class="bento-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <h3>AI Voice Agent</h3>
+          <p>AI picks up 24/7, captures caller info, and texts you the lead.</p>
+          <div class="bento-visual visual-call">
+            <div class="grid-pattern"></div>
+            <div class="glow"></div>
+            <div class="vis-call">
+              <div class="vis-call-orb">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+              </div>
+              <div class="vis-wave">
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <div class="vis-call-label">AI on the line</div>
+            </div>
+          </div>
         </div>
-        <div class="stat-item">
-          <span class="stat-number">24/7</span>
-          <span class="stat-label">AI Answering</span>
+
+        <!-- Reviews — floating review card -->
+        <div class="bento bento-md fade-in hide-on-mobile">
+          <div class="bento-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <h3>Review &amp; Follow-Up</h3>
+          <p>Auto-text every customer after the job. More reviews, higher rankings.</p>
+          <div class="bento-visual visual-review">
+            <div class="grid-pattern"></div>
+            <div class="glow"></div>
+            <span class="vis-badge">+1</span>
+            <div class="vis-review">
+              <div class="vis-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <div class="vis-review-text">Best in the area!</div>
+              <div class="vis-review-meta">New Google review</div>
+            </div>
+          </div>
         </div>
-        <div class="stat-item">
-          <span class="stat-number">100%</span>
-          <span class="stat-label">Custom Built</span>
+
+        <!-- SEO — search bar + result -->
+        <div class="bento bento-md fade-in">
+          <div class="bento-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+          <h3>SEO &amp; Google Maps</h3>
+          <p>Get found when homeowners in your area search for your trade.</p>
+          <div class="bento-visual visual-search">
+            <div class="grid-pattern"></div>
+            <div class="glow"></div>
+            <div class="vis-search">
+              <div class="vis-search-bar">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <span>hvac near me<span class="vis-cursor"></span></span>
+              </div>
+              <div class="vis-result">
+                <div class="vis-pin">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+                </div>
+                <div class="vis-result-text">
+                  <div class="vis-result-name">Your Business</div>
+                  <div class="vis-result-meta"><span class="vis-result-stars">&#9733;</span> 4.9 &middot; Open</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="stat-item">
-          <span class="stat-number">1,000+</span>
-          <span class="stat-label">Active Users</span>
+
+        <!-- Marketing & Ads — growth bar chart -->
+        <div class="bento bento-md fade-in">
+          <div class="bento-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="14 7 21 7 21 14"/></svg>
+          </div>
+          <h3>Marketing &amp; Ads</h3>
+          <p>Google Ads that put you in front of homeowners ready to buy.</p>
+          <div class="bento-visual visual-ad">
+            <div class="grid-pattern"></div>
+            <div class="glow"></div>
+            <div class="vis-ad">
+              <div class="vis-ad-stat">
+                <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 15 12 9 18 15"/></svg>
+                <span>+247%</span>
+              </div>
+              <div class="vis-ad-bars">
+                <span style="--h:22%"></span>
+                <span style="--h:34%"></span>
+                <span style="--h:48%"></span>
+                <span style="--h:42%"></span>
+                <span style="--h:68%"></span>
+                <span style="--h:84%"></span>
+                <span style="--h:100%"></span>
+              </div>
+              <div class="vis-ad-label">Leads this month</div>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <div style="text-align:center;margin-top:48px;" class="fade-in">
+        <a href="services.html" class="btn btn-outline">View All Services &#8594;</a>
       </div>
     </div>
   </section>
@@ -275,7 +446,6 @@
       <div class="marquee-row marquee-row-forward" id="clientsTrackTop">
         <a href="https://cedarstonetreeworks.com/" target="_blank" rel="noopener"><img src="images/clients/cedar-logo.png" alt="Cedar Stone Tree Works" crossorigin="anonymous"></a>
         <a href="https://katzhardware.com/" target="_blank" rel="noopener"><img src="images/clients/katz-logo.jpg" alt="Katz Ace Hardware" crossorigin="anonymous"></a>
-        <a href="https://growtogetherinitiativeinc.com/" target="_blank" rel="noopener"><img src="images/clients/grow-logo.png" alt="Grow Together Initiative" crossorigin="anonymous"></a>
         <a href="https://thecbna.org/" target="_blank" rel="noopener"><img src="images/clients/cbna-logo.jpeg" alt="CBNA" crossorigin="anonymous"></a>
         <a href="https://rbmbrokerage.com/" target="_blank" rel="noopener"><img src="images/clients/rbm-logo.png" alt="RBM Brokerage" crossorigin="anonymous"></a>
         <a href="https://icecreamproductions.org/" target="_blank" rel="noopener"><img src="images/clients/ice-cream-productions.png" alt="Ice Cream Productions" crossorigin="anonymous"></a>
@@ -283,7 +453,6 @@
         <!-- duplicate set for seamless loop -->
         <a href="https://cedarstonetreeworks.com/" target="_blank" rel="noopener"><img src="images/clients/cedar-logo.png" alt="Cedar Stone Tree Works" crossorigin="anonymous"></a>
         <a href="https://katzhardware.com/" target="_blank" rel="noopener"><img src="images/clients/katz-logo.jpg" alt="Katz Ace Hardware" crossorigin="anonymous"></a>
-        <a href="https://growtogetherinitiativeinc.com/" target="_blank" rel="noopener"><img src="images/clients/grow-logo.png" alt="Grow Together Initiative" crossorigin="anonymous"></a>
         <a href="https://thecbna.org/" target="_blank" rel="noopener"><img src="images/clients/cbna-logo.jpeg" alt="CBNA" crossorigin="anonymous"></a>
         <a href="https://rbmbrokerage.com/" target="_blank" rel="noopener"><img src="images/clients/rbm-logo.png" alt="RBM Brokerage" crossorigin="anonymous"></a>
         <a href="https://icecreamproductions.org/" target="_blank" rel="noopener"><img src="images/clients/ice-cream-productions.png" alt="Ice Cream Productions" crossorigin="anonymous"></a>
@@ -292,86 +461,15 @@
     </div>
   </section>
 
-  <!-- Services Showcase -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header fade-in">
-        <span class="section-label">What We Build</span>
-        <h2>The Full Stack for Business Growth</h2>
-        <p>Websites alone don't cut it. We build the entire system that turns searches into phone calls and calls into booked jobs.</p>
-      </div>
-
-      <div class="services-showcase">
-        <div class="service-feature fade-in">
-          <div class="sf-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-          </div>
-          <div class="sf-content">
-            <h3>Professional Websites</h3>
-            <p>Clean, fast, mobile-first sites that rank on Google and make homeowners call you. No templates. Hand-coded for speed and SEO from day one.</p>
-          </div>
-        </div>
-
-        <div class="service-feature fade-in">
-          <div class="sf-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          </div>
-          <div class="sf-content">
-            <h3>AI Voice Agent</h3>
-            <p>Never miss a lead. Our AI picks up your phone 24/7, captures caller info, and texts you the details. You call back when you're ready, not when you're with a customer.</p>
-          </div>
-        </div>
-
-        <div class="service-feature fade-in">
-          <div class="sf-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          </div>
-          <div class="sf-content">
-            <h3>Review &amp; Follow-Up Automation</h3>
-            <p>After every job, we automatically text your customer for a Google review. More reviews means more trust, more calls, and higher rankings.</p>
-          </div>
-        </div>
-
-        <div class="service-feature fade-in">
-          <div class="sf-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          </div>
-          <div class="sf-content">
-            <h3>SEO &amp; Google Maps</h3>
-            <p>Show up when someone in your area searches for your service. We optimize everything so Google puts you in front of the right people.</p>
-          </div>
-        </div>
-      </div>
-
-      <div style="text-align:center;margin-top:48px;" class="fade-in">
-        <a href="services.html" class="btn btn-outline">View All Services &#8594;</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Featured Work -->
+  <!-- Featured Work (dark section) -->
   <section class="section section-dark">
     <div class="container">
       <div class="section-header fade-in">
-        <span class="section-label" style="color:rgba(42,157,143,0.9);">Our Work</span>
-        <h2 style="color:#fff;">Sites We've Built for Real Businesses</h2>
-        <p style="color:rgba(255,255,255,0.6);">Not mockups. Live sites generating leads right now.</p>
+        <span class="section-label eyebrow-dark">Our Work</span>
+        <h2>Sites we've built for <em class="hero-highlight">real businesses.</em></h2>
+        <p>Not mockups. Live sites generating leads right now.</p>
       </div>
       <div class="featured-grid">
-        <a href="https://cedarstonetreeworks.com/" target="_blank" rel="noopener" class="featured-card fade-in">
-          <div class="featured-img">
-            <img src="images/cedar-preview.png" alt="Cedar Stone Tree Works website" loading="lazy">
-          </div>
-          <div class="featured-info">
-            <h3>Cedar Stone Tree Works</h3>
-            <p>Tree service site that's already generating leads from the contact form. Built in under 2 weeks.</p>
-            <div class="featured-tags">
-              <span class="tag">Website</span>
-              <span class="tag">SEO</span>
-              <span class="tag">Contact Form</span>
-            </div>
-          </div>
-        </a>
         <a href="https://katzhardware.com/" target="_blank" rel="noopener" class="featured-card fade-in">
           <div class="featured-img">
             <iframe src="https://katzhardware.com/" loading="lazy" title="Katz Ace Hardware preview" tabindex="-1"></iframe>
@@ -396,7 +494,7 @@
             <div class="featured-tags">
               <span class="tag">Website</span>
               <span class="tag">Custom Design</span>
-              <span class="tag">Membership Platform</span>
+              <span class="tag">Membership</span>
             </div>
           </div>
         </a>
@@ -411,28 +509,28 @@
   <section class="section">
     <div class="container">
       <div class="section-header fade-in">
-        <span class="section-label">How It Works</span>
-        <h2>From Call to Launch in 4 Steps</h2>
+        <span class="section-label">How it works</span>
+        <h2>From call to launch in <em class="serif-accent">four steps.</em></h2>
         <p>Simple process, no runaround. You tell us what you need, we build it.</p>
       </div>
       <div class="process-timeline">
         <div class="process-card fade-in">
-          <div class="pc-number">1</div>
+          <span class="pc-number">01</span>
           <h3>Discovery Call</h3>
           <p>30 minutes. We learn about your business, goals, and what you need to start booking more work.</p>
         </div>
         <div class="process-card fade-in">
-          <div class="pc-number">2</div>
+          <span class="pc-number">02</span>
           <h3>Strategy &amp; Design</h3>
           <p>We map out the site, pick the right tools, and show you a design before we build anything.</p>
         </div>
         <div class="process-card fade-in">
-          <div class="pc-number">3</div>
+          <span class="pc-number">03</span>
           <h3>Build &amp; Launch</h3>
           <p>Hand-coded, tested, and live within 1-2 weeks. You get a real website, not a drag-and-drop template.</p>
         </div>
         <div class="process-card fade-in">
-          <div class="pc-number">4</div>
+          <span class="pc-number">04</span>
           <h3>Grow &amp; Support</h3>
           <p>Ongoing SEO, AI tools, and monthly support. We keep things running so you can focus on running your business.</p>
         </div>
@@ -440,19 +538,36 @@
     </div>
   </section>
 
-  <!-- Testimonial -->
-  <section class="section section-gray">
+  <!-- Testimonials -->
+  <section class="section section-soft">
     <div class="container">
-      <div class="testimonial-block fade-in">
-        <svg class="testimonial-quote" width="48" height="48" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z" fill="currentColor"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z" fill="currentColor"/></svg>
-        <blockquote>
-          <p>"Extremely happy with how our website turned out. It's better than most of my competitors' sites, and we've already gotten leads from the contact form. These guys know what they're doing."</p>
-        </blockquote>
-        <div class="testimonial-author">
-          <img src="images/clients/cedar-logo.png" alt="Cedar Stone Tree Works" class="testimonial-avatar" loading="lazy">
-          <div>
-            <strong>Merick</strong>
-            <span>Owner, Cedar Stone Tree Works</span>
+      <div class="section-header fade-in">
+        <span class="section-label">What clients say</span>
+        <h2>Real words from <em class="serif-accent">real businesses.</em></h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-block fade-in">
+          <blockquote>
+            <p>Extremely happy with how our website turned out. It's better than most of my competitors' sites, and we've already gotten leads from the contact form. These guys know what they're doing.</p>
+          </blockquote>
+          <div class="testimonial-author">
+            <img src="images/clients/cedar-logo.png" alt="Cedar Stone Tree Works" class="testimonial-avatar" loading="lazy">
+            <div>
+              <strong>Merick</strong>
+              <span>Owner, Cedar Stone Tree Works</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-block fade-in">
+          <blockquote>
+            <p>They worked with us through the weekend to make our website and tech systems even better for all our members. What we love most is their response time and speed of implementation, executed with incredible precision and professionalism. Truly an elite level of work not commonly seen in this space &mdash; CBNA is blessed to have them on our team.</p>
+          </blockquote>
+          <div class="testimonial-author">
+            <img src="images/clients/cbna-logo.jpeg" alt="CBNA" class="testimonial-avatar" loading="lazy">
+            <div>
+              <strong>Cesar Barros</strong>
+              <span>Connecticut Business Networking Association</span>
+            </div>
           </div>
         </div>
       </div>
@@ -464,38 +579,48 @@
     <div class="container">
       <div class="section-header fade-in">
         <span class="section-label">FAQ</span>
-        <h2>Frequently Asked Questions</h2>
+        <h2>Frequently asked <em class="serif-accent">questions.</em></h2>
         <p>Quick answers to the questions we hear most.</p>
       </div>
       <div class="faq-list">
         <details class="faq-item fade-in">
           <summary class="faq-question">What does NJ Developments do?</summary>
-          <div class="faq-answer">
+          <div class="faq-answer-wrap">
+            <div class="faq-answer">
             <p>We build professional websites, set up AI voice agents that answer your calls 24/7, automate Google review requests after every job, and handle your SEO so customers find you on Google. Everything a local service business needs to get more customers without spending time on marketing.</p>
+          </div>
           </div>
         </details>
         <details class="faq-item fade-in">
           <summary class="faq-question">How fast can you build my website?</summary>
-          <div class="faq-answer">
+          <div class="faq-answer-wrap">
+            <div class="faq-answer">
             <p>Most websites go from concept to launch in 1-2 weeks. We move fast because you need to start getting leads, not wait around for months.</p>
+          </div>
           </div>
         </details>
         <details class="faq-item fade-in">
           <summary class="faq-question">I already get work from referrals. Why do I need a website?</summary>
-          <div class="faq-answer">
+          <div class="faq-answer-wrap">
+            <div class="faq-answer">
             <p>Referrals are great, but they have a ceiling. A website means people searching for your service in your area find you too. That's a second pipeline of leads you're currently missing. And when someone gets a referral, the first thing they do is Google you. If you don't show up, you lose the job before you know about it.</p>
+          </div>
           </div>
         </details>
         <details class="faq-item fade-in">
           <summary class="faq-question">What's an AI voice agent?</summary>
-          <div class="faq-answer">
+          <div class="faq-answer-wrap">
+            <div class="faq-answer">
             <p>It's an AI that answers your phone when you can't. If you're with a customer, driving, or it's after hours, the voice agent picks up, gets the caller's name, what they need, and their contact info, then texts it all to you. You call them back when you're free instead of losing them to a competitor who picks up.</p>
+          </div>
           </div>
         </details>
         <details class="faq-item fade-in">
           <summary class="faq-question">Do you provide ongoing support?</summary>
-          <div class="faq-answer">
+          <div class="faq-answer-wrap">
+            <div class="faq-answer">
             <p>Yes. We handle hosting, updates, and support on a monthly basis. You focus on running your business, we keep everything running online.</p>
+          </div>
           </div>
         </details>
       </div>
@@ -505,9 +630,9 @@
   <!-- CTA Banner -->
   <section class="cta-banner">
     <div class="container fade-in">
-      <h2>Stop Losing Leads. Let's Talk.</h2>
+      <h2>Stop losing leads. <em>Let's talk.</em></h2>
       <p>Book a free call and we'll show you exactly how to get more jobs online.</p>
-      <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/jamiahbartlett-pate/30-min-meeting-1?hide_gdpr_banner=1&primary_color=2a9d8f'});return false;" class="btn btn-white">Book a Free Consultation</a>
+      <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/jamiahbartlett-pate/30-min-meeting-1?hide_gdpr_banner=1&primary_color=2a9d8f'});return false;" class="btn btn-glow">Book a Free Consultation</a>
     </div>
   </section>
 
@@ -551,7 +676,7 @@
         </div>
       </div>
       <div class="footer-bar">
-        &copy; 2026 NJ Developments LLC. All rights reserved. <span style="margin:0 8px;opacity:0.5;">|</span> <a href="privacy.html" style="color:inherit;text-decoration:underline;">Privacy Policy</a> <span style="margin:0 8px;opacity:0.5;">|</span> <a href="terms.html" style="color:inherit;text-decoration:underline;">Terms of Service</a>
+        &copy; 2026 NJ Developments LLC. All rights reserved. <span style="margin:0 8px;opacity:0.5;">|</span> <a href="privacy.html">Privacy Policy</a> <span style="margin:0 8px;opacity:0.5;">|</span> <a href="terms.html">Terms of Service</a>
       </div>
     </div>
   </footer>
@@ -566,9 +691,32 @@
   </div>
 
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-  <script src="js/main.js?v=4"></script>
+  <script src="js/main.js?v=6"></script>
   <script>
-  /* Auto-trim whitespace from client logos — matched from CTBuisness/CBNA */
+  /* Hero booking card -> prefill Calendly with the visitor's details */
+  (function () {
+    var form = document.getElementById('hero-audit-form');
+    if (!form) return;
+    var CAL = 'https://calendly.com/jamiahbartlett-pate/30-min-meeting-1?hide_gdpr_banner=1&primary_color=2a9d8f';
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (typeof form.reportValidity === 'function' && !form.reportValidity()) return;
+      var val = function (id) { var el = document.getElementById(id); return el ? el.value.trim() : ''; };
+      var name = val('hf-name'), email = val('hf-email'), site = val('hf-site'), need = val('hf-need');
+      var details = need + (site ? ' — ' + site : '');
+      if (window.Calendly && typeof Calendly.initPopupWidget === 'function') {
+        Calendly.initPopupWidget({
+          url: CAL,
+          prefill: { name: name, email: email, customAnswers: { a1: details } }
+        });
+      } else {
+        window.location.href = 'contact.html';
+      }
+    });
+  })();
+  </script>
+  <script>
+  /* Auto-trim whitespace from client logos */
   const trimCache = new Map();
   function autoTrimImage(img) {
     try {
@@ -628,10 +776,8 @@
 
   (function() {
     const wrapper = document.getElementById('clientsWrapper');
-    const track = document.getElementById('clientsTrackTop');
     if (!wrapper) return;
 
-    // Wait for all images to load and auto-trim before showing
     const imgs = wrapper.querySelectorAll('img');
     const imgPromises = Array.from(imgs).map(img => new Promise(resolve => {
       const done = () => { autoTrimImage(img); resolve(); };
@@ -646,19 +792,6 @@
       wrapper.classList.add('ready');
     });
     setTimeout(() => wrapper.classList.add('ready'), 4000);
-
-    // Pause on hover (mouse + touch)
-    const pause = () => {
-      track.style.animationPlayState = 'paused';
-    };
-    const resume = () => {
-      track.style.animationPlayState = 'running';
-    };
-    wrapper.addEventListener('mouseenter', pause);
-    wrapper.addEventListener('mouseleave', resume);
-    wrapper.addEventListener('touchstart', pause, { passive: true });
-    wrapper.addEventListener('touchend', resume);
-    wrapper.addEventListener('touchcancel', resume);
   })();
   </script>
 </body>

@@ -23,7 +23,11 @@
   <meta property="og:url" content="https://nj-developments.com/portfolio">
   <meta property="og:title" content="Portfolio — NJ Developments | Our Work & Case Studies">
   <meta property="og:description" content="See the websites, software, and digital solutions NJ Developments has built for real businesses.">
-  <meta property="og:image" content="https://nj-developments.com/images/NJDev_Logo.png">
+  <meta property="og:image" content="https://nj-developments.com/images/og-image.jpg?v=2">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:alt" content="NJ Developments — Websites, AI Voice Agents &amp; Automation for Connecticut contractors">
   <meta property="og:site_name" content="NJ Developments">
   <meta property="og:locale" content="en_US">
 
@@ -31,14 +35,14 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Portfolio — NJ Developments | Our Work & Case Studies">
   <meta name="twitter:description" content="See the websites, software, and digital solutions NJ Developments has built for real businesses.">
-  <meta name="twitter:image" content="https://nj-developments.com/images/NJDev_Logo.png">
+  <meta name="twitter:image" content="https://nj-developments.com/images/og-image.jpg?v=2">
 
   <link rel="dns-prefetch" href="//fonts.googleapis.com">
   <link rel="dns-prefetch" href="//fonts.gstatic.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <meta name="theme-color" content="#1c3654">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#0a0e1a">
   <meta name="author" content="NJ Developments">
   <meta name="geo.region" content="US-CT">
   <meta name="geo.placename" content="Connecticut">
@@ -47,7 +51,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="css/styles.css?v=5">
+  <link rel="stylesheet" href="css/styles.css?v=6">
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 
   <!-- Structured Data -->
@@ -125,17 +129,6 @@
             "position": 5,
             "item": {
               "@type": "CreativeWork",
-              "name": "Grow Together Initiative",
-              "description": "A clean, professional website for a nonprofit education initiative — built to communicate their mission, programs, and drive community engagement.",
-              "url": "https://growtogetherinitiativeinc.com/",
-              "creator": { "@id": "https://nj-developments.com/#organization" }
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 6,
-            "item": {
-              "@type": "CreativeWork",
               "name": "Ice Cream Productions",
               "description": "Brand identity and website for a kids-focused nonprofit creative organization — designed to showcase youth programs, media, events, and community impact.",
               "url": "https://icecreamproductions.org/",
@@ -144,7 +137,7 @@
           },
           {
             "@type": "ListItem",
-            "position": 7,
+            "position": 6,
             "item": {
               "@type": "CreativeWork",
               "name": "Koi Moon Trades",
@@ -170,9 +163,9 @@
       <div class="nav-links">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
-        <a href="portfolio.html">Portfolio</a>
+        <a href="portfolio.html" class="active">Portfolio</a>
         <a href="about.html">About</a>
-        <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/jamiahbartlett-pate/30-min-meeting-1?hide_gdpr_banner=1&primary_color=2a9d8f'});return false;" class="nav-cta">Get Started &#8594;</a>
+        <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/jamiahbartlett-pate/30-min-meeting-1?hide_gdpr_banner=1&primary_color=2a9d8f'});return false;" class="nav-cta">Book a Call &#8594;</a>
       </div>
       <button class="hamburger" aria-label="Toggle navigation">
         <span></span>
@@ -185,24 +178,24 @@
   <main id="main-content">
 
   <!-- Page Header -->
-  <section class="portfolio-header">
+  <section class="page-header portfolio-header">
     <div class="container">
       <div class="portfolio-header-content">
         <span class="section-label">Portfolio</span>
-        <h1>Real Work. <span class="gradient-text">Real Results.</span></h1>
+        <h1>Real work. <em>Real results.</em></h1>
         <p>Every project starts with a problem. Here's how we solved them — custom-built digital solutions for businesses that needed more than a template.</p>
         <div class="portfolio-header-stats">
           <div class="stat">
             <span class="stat-number">Websites</span>
-            <span class="stat-label">Design & Development</span>
+            <span class="stat-label">Design &amp; Development</span>
           </div>
           <div class="stat">
             <span class="stat-number">SEO</span>
-            <span class="stat-label">Search & Google Rankings</span>
+            <span class="stat-label">Search &amp; Google Rankings</span>
           </div>
           <div class="stat">
             <span class="stat-number">Software</span>
-            <span class="stat-label">Custom Platforms & Apps</span>
+            <span class="stat-label">Custom Platforms &amp; Apps</span>
           </div>
         </div>
       </div>
@@ -218,7 +211,6 @@
       <div class="marquee-row marquee-row-forward" id="clientsTrackTop">
         <a href="https://cedarstonetreeworks.com/" target="_blank" rel="noopener"><img src="images/clients/cedar-logo.png" alt="Cedar Stone Tree Works" crossorigin="anonymous"></a>
         <a href="https://katzhardware.com/" target="_blank" rel="noopener"><img src="images/clients/katz-logo.jpg" alt="Katz Ace Hardware" crossorigin="anonymous"></a>
-        <a href="https://growtogetherinitiativeinc.com/" target="_blank" rel="noopener"><img src="images/clients/grow-logo.png" alt="Grow Together Initiative" crossorigin="anonymous"></a>
         <a href="https://thecbna.org/" target="_blank" rel="noopener"><img src="images/clients/cbna-logo.jpeg" alt="CBNA" crossorigin="anonymous"></a>
         <a href="https://rbmbrokerage.com/" target="_blank" rel="noopener"><img src="images/clients/rbm-logo.png" alt="RBM Brokerage" crossorigin="anonymous"></a>
         <a href="https://icecreamproductions.org/" target="_blank" rel="noopener"><img src="images/clients/ice-cream-productions.png" alt="Ice Cream Productions" crossorigin="anonymous"></a>
@@ -226,7 +218,6 @@
         <!-- duplicate set for seamless loop -->
         <a href="https://cedarstonetreeworks.com/" target="_blank" rel="noopener"><img src="images/clients/cedar-logo.png" alt="Cedar Stone Tree Works" crossorigin="anonymous"></a>
         <a href="https://katzhardware.com/" target="_blank" rel="noopener"><img src="images/clients/katz-logo.jpg" alt="Katz Ace Hardware" crossorigin="anonymous"></a>
-        <a href="https://growtogetherinitiativeinc.com/" target="_blank" rel="noopener"><img src="images/clients/grow-logo.png" alt="Grow Together Initiative" crossorigin="anonymous"></a>
         <a href="https://thecbna.org/" target="_blank" rel="noopener"><img src="images/clients/cbna-logo.jpeg" alt="CBNA" crossorigin="anonymous"></a>
         <a href="https://rbmbrokerage.com/" target="_blank" rel="noopener"><img src="images/clients/rbm-logo.png" alt="RBM Brokerage" crossorigin="anonymous"></a>
         <a href="https://icecreamproductions.org/" target="_blank" rel="noopener"><img src="images/clients/ice-cream-productions.png" alt="Ice Cream Productions" crossorigin="anonymous"></a>
@@ -236,7 +227,7 @@
   </section>
 
   <!-- Portfolio Grid -->
-  <section class="section">
+  <section class="section" style="padding-top: 56px;">
     <div class="container">
       <div class="portfolio-grid">
 
@@ -269,7 +260,7 @@
             <div class="portfolio-tags">
               <span class="tag">Website</span>
               <span class="tag">Custom Design</span>
-              <span class="tag">Membership Platform</span>
+              <span class="tag">Membership</span>
             </div>
           </div>
         </div>
@@ -304,23 +295,6 @@
               <span class="tag">Website</span>
               <span class="tag">Custom Design</span>
               <span class="tag">Lead Generation</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="portfolio-card fade-in">
-          <a href="https://growtogetherinitiativeinc.com/" target="_blank" rel="noopener" class="portfolio-preview-link">
-            <div class="portfolio-preview">
-              <iframe src="https://growtogetherinitiativeinc.com/" loading="lazy" title="Grow Together Initiative preview" tabindex="-1"></iframe>
-            </div>
-          </a>
-          <div class="portfolio-info">
-            <h3>Grow Together Initiative</h3>
-            <p>A clean, professional website for a nonprofit education initiative — built to communicate their mission, programs, and drive community engagement.</p>
-            <div class="portfolio-tags">
-              <span class="tag">Website</span>
-              <span class="tag">Nonprofit</span>
-              <span class="tag">Custom Design</span>
             </div>
           </div>
         </div>
@@ -366,11 +340,11 @@
   <!-- CTA Banner -->
   <section class="cta-banner">
     <div class="container fade-in">
-      <span class="section-label">Your Project Could Be Next</span>
-      <h2>Let's Build Something Your Customers Will Love</h2>
+      <span class="section-label" style="color: var(--teal-bright);">Your project could be next</span>
+      <h2>Let's build something your <em>customers will love.</em></h2>
       <p>We work with businesses of all sizes. Tell us what you need and we'll put together a plan — no commitment, no pressure.</p>
       <div class="cta-banner-buttons">
-        <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/jamiahbartlett-pate/30-min-meeting-1?hide_gdpr_banner=1&primary_color=2a9d8f'});return false;" class="btn btn-white">Book a Free Call</a>
+        <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/jamiahbartlett-pate/30-min-meeting-1?hide_gdpr_banner=1&primary_color=2a9d8f'});return false;" class="btn btn-glow">Book a Free Call</a>
         <a href="services.html" class="btn btn-outline">View Our Services</a>
       </div>
     </div>
@@ -416,7 +390,7 @@
         </div>
       </div>
       <div class="footer-bar">
-        &copy; 2026 NJ Developments LLC. All rights reserved. <span style="margin:0 8px;opacity:0.5;">|</span> <a href="privacy.html" style="color:inherit;text-decoration:underline;">Privacy Policy</a> <span style="margin:0 8px;opacity:0.5;">|</span> <a href="terms.html" style="color:inherit;text-decoration:underline;">Terms of Service</a>
+        &copy; 2026 NJ Developments LLC. All rights reserved. <span style="margin:0 8px;opacity:0.5;">|</span> <a href="privacy.html">Privacy Policy</a> <span style="margin:0 8px;opacity:0.5;">|</span> <a href="terms.html">Terms of Service</a>
       </div>
     </div>
   </footer>
@@ -431,6 +405,63 @@
   </div>
 
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-  <script src="js/main.js?v=4"></script>
+  <script src="js/main.js?v=6"></script>
+  <script>
+  /* Auto-trim whitespace from client logos */
+  const trimCache = new Map();
+  function autoTrimImage(img) {
+    try {
+      const origSrc = img.getAttribute('src');
+      if (trimCache.has(origSrc)) { img.src = trimCache.get(origSrc); return; }
+      const canvas = document.createElement('canvas');
+      const ctx = canvas.getContext('2d');
+      canvas.width = img.naturalWidth;
+      canvas.height = img.naturalHeight;
+      ctx.drawImage(img, 0, 0);
+      const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+      const data = imageData.data;
+      const w = canvas.width, h = canvas.height;
+      const threshold = 245;
+      let top = h, left = w, bottom = 0, right = 0;
+      for (let y = 0; y < h; y++) for (let x = 0; x < w; x++) {
+        const i = (y * w + x) * 4;
+        const a = data[i + 3]; if (a < 10) continue;
+        const r = data[i], g = data[i + 1], b = data[i + 2];
+        if (r >= threshold && g >= threshold && b >= threshold) continue;
+        if (y < top) top = y; if (y > bottom) bottom = y;
+        if (x < left) left = x; if (x > right) right = x;
+      }
+      const contentArea = (right - left + 1) * (bottom - top + 1);
+      if (contentArea < w * h * 0.1 || bottom <= top || right <= left) return;
+      const padX = Math.round((right - left) * 0.05);
+      const padY = Math.round((bottom - top) * 0.05);
+      const cx = Math.max(0, left - padX);
+      const cy = Math.max(0, top - padY);
+      const cw = Math.min(w - cx, right - left + 1 + padX * 2);
+      const ch = Math.min(h - cy, bottom - top + 1 + padY * 2);
+      const trimmed = document.createElement('canvas');
+      trimmed.width = cw; trimmed.height = ch;
+      trimmed.getContext('2d').drawImage(canvas, cx, cy, cw, ch, 0, 0, cw, ch);
+      const dataURL = trimmed.toDataURL();
+      img.src = dataURL;
+      trimCache.set(origSrc, dataURL);
+    } catch (e) {}
+  }
+  (function() {
+    const wrapper = document.getElementById('clientsWrapper');
+    if (!wrapper) return;
+    const imgs = wrapper.querySelectorAll('img');
+    const imgPromises = Array.from(imgs).map(img => new Promise(resolve => {
+      const done = () => { autoTrimImage(img); resolve(); };
+      if (img.complete && img.naturalWidth) { done(); }
+      else {
+        img.addEventListener('load', done);
+        img.addEventListener('error', resolve);
+      }
+    }));
+    Promise.all(imgPromises).then(() => { wrapper.classList.add('ready'); });
+    setTimeout(() => wrapper.classList.add('ready'), 4000);
+  })();
+  </script>
 </body>
 </html>

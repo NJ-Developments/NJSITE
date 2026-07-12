@@ -1,5 +1,5 @@
 /* ============================================
-   NJ Developments — Main JS
+   NJ Developments — Main JS (v6)
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -19,25 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
     progressBar.style.width = progress + '%';
   }
   window.addEventListener('scroll', updateProgress, { passive: true });
-
-  // --- Parallax on hero/page headers (desktop only, respects reduced motion) ---
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const isMobile = window.innerWidth < 768;
-  const parallaxEls = document.querySelectorAll('.hero, .page-header');
-  if (parallaxEls.length > 0 && !prefersReducedMotion && !isMobile) {
-    window.addEventListener('scroll', () => {
-      const scrollY = window.scrollY;
-      parallaxEls.forEach(el => {
-        if (scrollY < el.offsetHeight + el.offsetTop) {
-          const content = el.querySelector('.container');
-          if (content) {
-            content.style.transform = 'translateY(' + (scrollY * 0.25) + 'px)';
-            content.style.opacity = Math.max(1 - scrollY / (el.offsetHeight * 1.2), 0);
-          }
-        }
-      });
-    }, { passive: true });
-  }
 
   // --- Button ripple effect ---
   document.addEventListener('click', (e) => {
@@ -77,18 +58,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Navbar scroll effect ---
   const navbar = document.querySelector('.navbar');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 20) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
-  });
+  if (navbar) {
+    const onScroll = () => {
+      if (window.scrollY > 16) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
 
   // --- Scroll fade-in animations ---
   const faders = document.querySelectorAll('.fade-in');
 
-  if (faders.length > 0) {
+  if (faders.length > 0 && 'IntersectionObserver' in window) {
+    // Mark body so CSS hides fade-in items; without this, content stays visible
+    // for no-JS / headless renderers.
+    document.body.classList.add('js-ready');
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -97,8 +86,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     }, {
-      threshold: 0.1,
-      rootMargin: '0px 0px -60px 0px'
+      threshold: 0.08,
+      rootMargin: '0px 0px -80px 0px'
     });
 
     faders.forEach(el => observer.observe(el));
@@ -110,7 +99,6 @@ document.addEventListener('DOMContentLoaded', () => {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      // Basic validation
       const name = contactForm.querySelector('[name="name"]');
       const email = contactForm.querySelector('[name="email"]');
       const message = contactForm.querySelector('[name="message"]');
@@ -120,7 +108,6 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // Show success message (replace with real form submission)
       const successMsg = document.querySelector('.form-success');
       if (successMsg) {
         successMsg.classList.add('show');
@@ -223,11 +210,78 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Active nav link ---
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav-links a:not(.btn)').forEach(link => {
+  document.querySelectorAll('.nav-links a:not(.nav-cta)').forEach(link => {
     const href = link.getAttribute('href');
     if (href === currentPage || (currentPage === '' && href === 'index.html')) {
       link.classList.add('active');
     }
+  });
+
+  // --- FAQ accordion: smooth open/close on every click ---
+  // Hijacks <summary> clicks and uses Web Animations API to animate the
+  // <details> height. The native [open] toggle on closing immediately collapses
+  // the content, so we run the close animation first then flip [open].
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const summary = item.querySelector('summary');
+    const wrap = item.querySelector('.faq-answer-wrap');
+    if (!summary || !wrap) return;
+
+    let animation = null;
+    let isClosing = false;
+    let isExpanding = false;
+
+    function shrink() {
+      isClosing = true;
+      const startHeight = `${item.offsetHeight}px`;
+      const endHeight = `${summary.offsetHeight}px`;
+      if (animation) animation.cancel();
+      animation = item.animate(
+        { height: [startHeight, endHeight] },
+        { duration: 380, easing: 'cubic-bezier(0.22, 1, 0.36, 1)' }
+      );
+      animation.onfinish = () => finish(false);
+      animation.oncancel = () => { isClosing = false; };
+    }
+
+    function expand() {
+      isExpanding = true;
+      const startHeight = `${item.offsetHeight}px`;
+      const endHeight = `${summary.offsetHeight + wrap.offsetHeight}px`;
+      if (animation) animation.cancel();
+      animation = item.animate(
+        { height: [startHeight, endHeight] },
+        { duration: 380, easing: 'cubic-bezier(0.22, 1, 0.36, 1)' }
+      );
+      animation.onfinish = () => finish(true);
+      animation.oncancel = () => { isExpanding = false; };
+    }
+
+    function finish(openState) {
+      item.open = openState;
+      item.classList.remove('faq-animating');
+      animation = null;
+      isClosing = false;
+      isExpanding = false;
+      item.style.height = '';
+      item.style.overflow = '';
+    }
+
+    summary.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (isClosing || !item.open) {
+        // Lock closed height *before* revealing the wrap, otherwise the
+        // inline height we set would already include the expanded content.
+        item.style.height = `${item.offsetHeight}px`;
+        item.style.overflow = 'hidden';
+        item.classList.add('faq-animating');
+        item.open = true;
+        requestAnimationFrame(expand);
+      } else {
+        item.style.overflow = 'hidden';
+        item.classList.add('faq-animating');
+        shrink();
+      }
+    });
   });
 
   // --- Logo marquee ---
@@ -242,7 +296,6 @@ document.addEventListener('DOMContentLoaded', () => {
       marqueeWrapper.classList.add('ready');
     }
 
-    // Wait for all images to load, then start (with 4s safety timeout)
     const imgPromises = Array.from(imgs).map(img => new Promise(resolve => {
       if (img.complete && img.naturalWidth) resolve();
       else {
@@ -253,7 +306,6 @@ document.addEventListener('DOMContentLoaded', () => {
     Promise.all(imgPromises).then(startMarquee);
     setTimeout(startMarquee, 4000);
 
-    // Pause on hover (mouse + touch)
     const pause = () => rows.forEach(r => r.classList.add('paused'));
     const resume = () => rows.forEach(r => r.classList.remove('paused'));
     marqueeWrapper.addEventListener('mouseenter', pause);

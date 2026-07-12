@@ -15,17 +15,17 @@
   <title>Page Not Found — NJ Developments</title>
   <meta name="description" content="The page you're looking for doesn't exist. Head back to NJ Developments to explore our services.">
   <meta name="robots" content="noindex, follow">
-  <meta name="theme-color" content="#1c3654">
+  <meta name="theme-color" content="#0a0e1a">
   <link rel="dns-prefetch" href="//fonts.googleapis.com">
   <link rel="dns-prefetch" href="//fonts.gstatic.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="css/styles.css?v=5">
+  <link rel="stylesheet" href="css/styles.css?v=6">
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 </head>
 <body>
@@ -33,7 +33,7 @@
   <a href="#main-content" class="skip-to-content">Skip to main content</a>
 
   <!-- Navbar -->
-  <nav class="navbar" aria-label="Main navigation">
+  <nav class="navbar navbar-dark" aria-label="Main navigation">
     <div class="container">
       <a href="index.html" class="nav-logo"><img src="images/NJDev_Logo.png" alt="NJ Developments" class="nav-logo-img"></a>
       <div class="nav-links">
@@ -41,7 +41,7 @@
         <a href="services.html">Services</a>
         <a href="portfolio.html">Portfolio</a>
         <a href="about.html">About</a>
-        <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/jamiahbartlett-pate/30-min-meeting-1?hide_gdpr_banner=1&primary_color=2a9d8f'});return false;" class="nav-cta">Get Started &#8594;</a>
+        <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/jamiahbartlett-pate/30-min-meeting-1?hide_gdpr_banner=1&primary_color=2a9d8f'});return false;" class="nav-cta">Book a Call &#8594;</a>
       </div>
       <button class="hamburger" aria-label="Toggle navigation">
         <span></span>
@@ -54,15 +54,20 @@
   <main id="main-content">
 
   <!-- 404 Content -->
-  <section class="hero" style="min-height: 70vh; display: flex; align-items: center;">
-    <div class="container" style="text-align: center;">
-      <span class="section-label">Error 404</span>
-      <h1 style="font-size: clamp(4rem, 10vw, 8rem); margin-bottom: 8px;"><span class="gradient-text">404</span></h1>
-      <h2 style="margin-bottom: 16px;">Page Not Found</h2>
-      <p>The page you're looking for doesn't exist or has been moved. Let's get you back on track.</p>
-      <div class="hero-buttons">
-        <a href="index.html" class="btn btn-primary">Back to Home</a>
-        <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/jamiahbartlett-pate/30-min-meeting-1?hide_gdpr_banner=1&primary_color=2a9d8f'});return false;" class="btn btn-outline">Contact Us</a>
+  <section class="hero-dark" style="min-height: 80vh; display: flex; align-items: center;">
+    <div class="hero-mesh" aria-hidden="true"></div>
+    <div class="hero-grid-bg" aria-hidden="true"></div>
+    <div class="hero-grain" aria-hidden="true"></div>
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-badge">Error 404</span>
+        <h1 style="font-family: 'Instrument Serif', serif; font-size: clamp(6rem, 18vw, 12rem); line-height: 1; margin-bottom: 8px;"><em>404.</em></h1>
+        <h2 style="color: #fff; font-family: 'Instrument Serif', serif; font-weight: 400; font-size: clamp(1.6rem, 3.5vw, 2.4rem); margin-bottom: 16px; letter-spacing: -0.018em;">Page not found.</h2>
+        <p>The page you're looking for doesn't exist or has been moved. Let's get you back on track.</p>
+        <div class="hero-buttons">
+          <a href="index.html" class="btn btn-glow">Back to Home</a>
+          <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/jamiahbartlett-pate/30-min-meeting-1?hide_gdpr_banner=1&primary_color=2a9d8f'});return false;" class="btn btn-ghost">Contact Us</a>
+        </div>
       </div>
     </div>
   </section>
@@ -122,6 +127,6 @@
   </div>
 
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-  <script src="js/main.js?v=4"></script>
+  <script src="js/main.js?v=6"></script>
 </body>
 </html>
