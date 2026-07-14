@@ -14,7 +14,7 @@ Live: <https://nj-developments.com>
 | Styles | Single `css/styles.css` design system |
 | Scripts | One `js/main.js` for nav, scroll progress, fade-ins, marquee, business-card modal |
 | Fonts | `Inter` (body, UI) + `Instrument Serif` (display / editorial accents), both from Google Fonts |
-| Bookings | Calendly inline + popup widget |
+| Inquiry + bookings | Embedded GoHighLevel form-first calendar widget |
 | Analytics | Google Analytics (GA4 — `G-WZQ2CGG93L`) |
 | Hosting | Firebase Hosting (config in `firebase.json`, project in `.firebaserc`) |
 
@@ -30,14 +30,15 @@ NJSITE/
 ├── services.html                           Services grid
 ├── portfolio.html                          Client work grid w/ live iframe previews
 ├── about.html                              Founders, story, values, why-us
-├── contact.html                            Calendly embed + contact info
+├── book.html                               GHL project inquiry + optional booking
+├── contact.html                            Legacy route fallback to /book
 ├── blog.html                               Blog post index
 ├── blog-*.html                             Individual blog posts
 ├── privacy.html                            Privacy policy
 ├── terms.html                              Terms of service
 ├── 404.html                                Not-found page (dark editorial)
 │
-├── css/styles.css                          The entire design system (v6)
+├── css/styles.css                          The entire design system (v7)
 ├── js/main.js                              All client behavior
 │
 ├── images/
@@ -179,8 +180,9 @@ Edit the `.testimonial-block` in `index.html`. Quote text goes in `<blockquote><
 - **Email** — `Njdevelopments123@gmail.com`
 - **Phone** — `860-987-7606`
 - **Instagram** — [@nj_developments_ct](https://www.instagram.com/nj_developments_ct/)
-- **Calendly** — `https://calendly.com/jamiahbartlett-pate/30-min-meeting-1`
+- **Project inquiry** — `https://nj-developments.com/book`
+- **GHL widget** — permanent calendar ID `4fl6kTMdXBi20NflHTic`
 
 Founders: Jamiah Bartlett, Javier Flores, Nolan Krieger.
 
-If any of the above changes, search-replace across all HTML files (footer, contact page, JSON-LD blocks, and Calendly popup URLs).
+If any of the above changes, update the shared footer/CTA links, `book.html`, JSON-LD blocks, `sitemap.xml`, `llms.txt`, and `.well-known` route inventories.

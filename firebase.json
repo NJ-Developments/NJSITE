@@ -10,6 +10,13 @@
     ],
     "cleanUrls": true,
     "trailingSlash": false,
+    "redirects": [
+      {
+        "source": "/contact",
+        "destination": "/book",
+        "type": 301
+      }
+    ],
     "rewrites": [],
     "headers": [
       {

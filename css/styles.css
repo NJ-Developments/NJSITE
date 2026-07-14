@@ -824,6 +824,77 @@ p { color: var(--gray-600); }
   color: var(--gray-500);
 }
 
+.hero-route-card {
+  padding: 34px 30px 28px;
+}
+.hero-route-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  color: var(--teal-deep);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.hero-route-eyebrow::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--teal);
+  box-shadow: 0 0 0 5px var(--teal-soft);
+}
+.hero-route-card .hff-title {
+  font-size: clamp(1.65rem, 2.4vw, 2.15rem);
+  margin-bottom: 12px;
+}
+.hero-dark.hero-split .hero-route-card .hff-sub {
+  font-size: 0.98rem;
+  line-height: 1.65;
+  max-width: none;
+  margin: 0 0 20px;
+  color: var(--gray-600);
+  text-align: left;
+}
+.hero-route-steps {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0;
+  display: grid;
+  gap: 12px;
+}
+.hero-route-steps li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--r-xs);
+  background: #f6f7f9;
+  color: var(--ink);
+  font-size: 0.9rem;
+}
+.hero-route-steps span {
+  display: grid;
+  place-items: center;
+  flex: 0 0 28px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+.hero-dark.hero-split .hero-route-card .hff-note {
+  max-width: none;
+  margin: 10px 0 0;
+  color: var(--gray-500);
+  text-align: center;
+}
+
 @media (max-width: 1024px) {
   .hero-split .hero-grid { grid-template-columns: 1fr; gap: 36px; max-width: 620px; }
   .hero-dark.hero-split .hero-copy { max-width: none; }
@@ -2569,15 +2640,37 @@ p { color: var(--gray-600); }
   line-height: 1.65;
 }
 
-/* --- Contact Layout --- */
-.contact-layout {
+/* --- Project inquiry + optional booking --- */
+.booking-section {
+  padding-top: 28px;
+  background:
+    radial-gradient(circle at 86% 14%, rgba(42, 157, 143, 0.08), transparent 30%),
+    var(--bg);
+}
+
+.booking-layout {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 64px;
+  grid-template-columns: minmax(280px, 0.74fr) minmax(0, 1.46fr);
+  gap: clamp(32px, 5vw, 72px);
   align-items: start;
 }
 
-.contact-info-side h2 {
+.booking-intro {
+  position: sticky;
+  top: 118px;
+}
+
+.booking-kicker {
+  display: block;
+  margin-bottom: 14px;
+  color: var(--teal-deep);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.booking-intro h2 {
   font-family: 'Instrument Serif', serif;
   font-weight: 400;
   font-size: clamp(1.8rem, 3.5vw, 2.6rem);
@@ -2586,11 +2679,54 @@ p { color: var(--gray-600); }
   line-height: 1.08;
 }
 
-.contact-info-side > p {
+.booking-intro > p {
   color: var(--gray-600);
   font-size: 1.04rem;
   line-height: 1.7;
-  margin-bottom: 40px;
+  margin-bottom: 28px;
+}
+
+.booking-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px;
+  display: grid;
+  gap: 18px;
+}
+
+.booking-steps li {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+.booking-step-number {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(42, 157, 143, 0.28);
+  border-radius: 50%;
+  background: var(--teal-soft);
+  color: var(--teal-deep);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+
+.booking-steps strong {
+  display: block;
+  margin-bottom: 3px;
+  color: var(--ink);
+  font-size: 0.96rem;
+}
+
+.booking-steps p {
+  margin: 0;
+  color: var(--gray-600);
+  font-size: 0.88rem;
+  line-height: 1.55;
 }
 
 .contact-info-list {
@@ -2634,38 +2770,83 @@ p { color: var(--gray-600); }
   color: var(--ink);
 }
 
-.contact-form-side {
+.booking-contact-list {
+  padding-top: 26px;
+  border-top: 1px solid var(--line);
+}
+
+.booking-cover-copy {
+  max-width: 270px;
+  color: var(--gray-600);
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+.booking-widget-shell {
   background: var(--bg-elev);
   border-radius: var(--r-lg);
-  padding: 8px;
+  padding: 12px;
   border: 1px solid var(--line);
   overflow: hidden;
   box-shadow: var(--sh-2);
 }
 
-.calendly-mobile-cta {
-  background: var(--bg-elev);
-  border: 1px solid var(--line);
-  border-radius: var(--r-lg);
-  padding: 32px 24px;
-  text-align: center;
-  display: none;
+.booking-widget-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 10px 16px;
+  color: var(--gray-500);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
 }
-.calendly-mobile-cta > p:first-child {
-  font-size: 1.04rem;
-  color: var(--ink);
-  margin-bottom: 20px;
-  font-weight: 500;
+.booking-widget-label span:first-child {
+  color: var(--teal-deep);
+}
+
+.booking-widget {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 900px;
+  border: 0;
+  border-radius: var(--r-md);
+  background: #f7f9fb;
+  overflow: hidden;
+}
+
+.booking-widget-fallback {
+  margin: 12px 8px 2px;
+  color: var(--gray-500);
+  font-size: 0.78rem;
+  text-align: center;
+}
+.booking-widget-fallback a {
+  color: var(--teal-deep);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 @media (max-width: 768px) {
-  .contact-layout { grid-template-columns: 1fr; gap: 40px; }
-  .contact-form-side { padding: 4px; }
-  .calendly-desktop-only { display: none !important; }
-  .calendly-mobile-cta { display: block; }
+  .booking-section { padding-top: 18px; }
+  .booking-layout { grid-template-columns: 1fr; gap: 32px; }
+  .booking-intro { position: static; }
+  .booking-widget-shell { order: -1; }
+  .booking-contact-list { display: grid; grid-template-columns: 1fr 1fr; }
+  .booking-widget-shell { padding: 7px; border-radius: var(--r-md); }
+  .booking-widget-label { padding: 9px 7px 13px; font-size: 0.64rem; }
+  .booking-widget { min-height: 980px; border-radius: var(--r-sm); }
 }
-@media (min-width: 769px) {
-  .calendly-mobile-cta { display: none !important; }
+
+@media (max-width: 520px) {
+  .booking-contact-list { grid-template-columns: 1fr; }
+  .booking-widget-label { align-items: flex-start; flex-direction: column; gap: 4px; }
+  .booking-widget { min-height: 1060px; }
 }
 
 /* --- Form --- */

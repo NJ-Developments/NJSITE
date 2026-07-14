@@ -17,7 +17,7 @@ NJ Developments LLC builds fast, conversion-focused websites and layers AI autom
 
 ## How to engage
 
-- Book a call: https://nj-developments.com/contact
+- Start a project inquiry and optionally book a call: https://nj-developments.com/book
 - Portfolio: https://nj-developments.com/portfolio
 - Services detail: https://nj-developments.com/services
 - Blog: https://nj-developments.com/blog
@@ -33,7 +33,7 @@ NJ Developments LLC builds fast, conversion-focused websites and layers AI autom
 - [Services](https://nj-developments.com/services): Full service catalog with descriptions.
 - [Portfolio](https://nj-developments.com/portfolio): Past client work.
 - [About](https://nj-developments.com/about): Team and company background.
-- [Contact](https://nj-developments.com/contact): Contact form and booking.
+- [Project Inquiry](https://nj-developments.com/book): Submit project details, then optionally book a Project Strategy Call.
 
 ## Pricing
 
@@ -50,4 +50,4 @@ Small founder-led team based in Connecticut. Founder: Jamiah Bartlett.
 ## Contact
 
 - Website: https://nj-developments.com
-- Contact form: https://nj-developments.com/contact
+- Project inquiry: https://nj-developments.com/book
