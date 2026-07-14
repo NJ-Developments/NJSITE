@@ -177,8 +177,9 @@ Edit the `.testimonial-block` in `index.html`. Quote text goes in `<blockquote><
 
 ## Contact / business info (kept consistent across pages)
 
-- **Email** — `Njdevelopments123@gmail.com`
-- **Phone** — `860-987-7606`
+- **Email** — `jamiah@nj-developments.com`
+- **Phone** — `860-815-8662`
+- **Business address** — `2389 Main St, Glastonbury, CT 06033`
 - **Instagram** — [@nj_developments_ct](https://www.instagram.com/nj_developments_ct/)
 - **Project inquiry** — `https://nj-developments.com/book`
 - **GHL widget** — permanent calendar ID `4fl6kTMdXBi20NflHTic`
