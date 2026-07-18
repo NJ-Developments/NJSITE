@@ -124,7 +124,7 @@ firebase serve --only hosting
 Then open `http://localhost:8765`.
 
 ### After editing CSS / JS
-Bump the `?v=` query string on the `styles.css` / `main.js` references in every HTML file to bust cache. Currently at `v=6`.
+Bump the `?v=` query string on the `styles.css` / `main.js` references in every HTML file to bust cache. Styles are currently at `v=8`; JavaScript is at `v=7`.
 
 ---
 
