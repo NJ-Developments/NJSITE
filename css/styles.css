@@ -563,33 +563,6 @@ p { color: var(--gray-600); }
   margin: 0 auto;
 }
 
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 32px;
-}
-
-.hero-badge::before {
-  content: '';
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--teal-bright);
-  box-shadow: 0 0 0 4px rgba(62, 197, 177, 0.25);
-  animation: pulse 2.4s ease-in-out infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(62, 197, 177, 0.4); }
-  50%      { box-shadow: 0 0 0 6px rgba(62, 197, 177, 0); }
-}
-
 .hero-dark h1 {
   font-family: 'Instrument Serif', 'Times New Roman', serif;
   font-weight: 400;
@@ -615,6 +588,11 @@ p { color: var(--gray-600); }
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  /* italic glyphs overshoot the background-clip:text box; pad + clone so the last
+     letter (e.g. the slanted "l" in "real") isn't cropped, incl. when it wraps */
+  padding-right: 0.09em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 .hero-dark p {
@@ -827,25 +805,6 @@ p { color: var(--gray-600); }
 .hero-route-card {
   padding: 34px 30px 28px;
 }
-.hero-route-eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 14px;
-  color: var(--teal-deep);
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-.hero-route-eyebrow::before {
-  content: '';
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--teal);
-  box-shadow: 0 0 0 5px var(--teal-soft);
-}
 .hero-route-card .hff-title {
   font-size: clamp(1.65rem, 2.4vw, 2.15rem);
   margin-bottom: 12px;
@@ -912,6 +871,15 @@ p { color: var(--gray-600); }
   .hero-split .hero-buttons { flex-direction: column; align-items: stretch; }
   .hero-split .hero-buttons .btn { width: 100%; }
   .hero-form-card { padding: 22px 18px 20px; }
+}
+
+/* Mobile home hero: solid brand navy instead of the client-site montage */
+@media (max-width: 768px) {
+  .hero-split .hero-photo {
+    background: var(--navy-deep);
+    transform: none;
+  }
+  .hero-split .hero-scrim { background: none; }
 }
 
 /* --- Booking page: mobile form-first experience --- */
@@ -3636,7 +3604,6 @@ body.js-ready .fade-in:not(.visible) {
   .hero-buttons { flex-direction: column; gap: 10px; }
   .hero-buttons .btn { width: 100%; }
   .hero-trust { margin-top: 32px; }
-  .hero-badge { font-size: 0.72rem; margin-bottom: 24px; }
 
   .stats-bar { padding: 28px 0; }
   .stats-row {
@@ -3714,8 +3681,7 @@ body.js-ready .fade-in:not(.visible) {
   html { scroll-behavior: auto; }
   body { opacity: 1 !important; transition: none !important; }
   .fade-in { opacity: 1 !important; transform: none !important; }
-  .hero-mesh,
-  .hero-badge::before { animation: none !important; }
+  .hero-mesh { animation: none !important; }
 }
 
 /* --- Mobile touch tweaks --- */
