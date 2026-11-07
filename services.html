@@ -12,7 +12,7 @@
     </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Services — NJ Developments | Websites, AI Voice Agents &amp; Automation for Contractors</title>
+  <title>Services | NJ Developments | Websites, AI Voice Agents &amp; Automation for Contractors &amp; Local Businesses</title>
   <meta name="description" content="Websites, AI voice agents, review automation, lead follow-up, and SEO for HVAC, roofing, electrical, and service contractors in Connecticut.">
   <meta name="keywords" content="contractor website CT, AI voice agent, review automation contractors, lead follow-up, SEO for contractors, HVAC website, roofer website, electrician website">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -21,27 +21,27 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://nj-developments.com/services">
-  <meta property="og:title" content="Services — NJ Developments | Websites, AI & Automation for Contractors">
-  <meta property="og:description" content="Websites, AI voice agents, review automation, lead follow-up, and SEO for service contractors in Connecticut.">
+  <meta property="og:title" content="Services | NJ Developments | Websites, AI & Automation for Local Businesses">
+  <meta property="og:description" content="Websites, AI voice agents, review automation, lead follow-up, and SEO for contractors and local businesses in Connecticut.">
   <meta property="og:image" content="https://nj-developments.com/images/og-image.jpg?v=2">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:type" content="image/jpeg">
-  <meta property="og:image:alt" content="NJ Developments — Websites, AI Voice Agents &amp; Automation for Connecticut contractors">
+  <meta property="og:image:alt" content="NJ Developments: Websites, AI Voice Agents &amp; Automation for Connecticut contractors">
   <meta property="og:site_name" content="NJ Developments">
   <meta property="og:locale" content="en_US">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Services — NJ Developments | Websites, AI & Automation for Contractors">
-  <meta name="twitter:description" content="Websites, AI voice agents, review automation, lead follow-up, and SEO for service contractors in Connecticut.">
+  <meta name="twitter:title" content="Services | NJ Developments | Websites, AI & Automation for Local Businesses">
+  <meta name="twitter:description" content="Websites, AI voice agents, review automation, lead follow-up, and SEO for contractors and local businesses in Connecticut.">
   <meta name="twitter:image" content="https://nj-developments.com/images/og-image.jpg?v=2">
 
   <link rel="dns-prefetch" href="//fonts.googleapis.com">
   <link rel="dns-prefetch" href="//fonts.gstatic.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <meta name="theme-color" content="#0a0e1a">
   <meta name="author" content="NJ Developments">
   <meta name="geo.region" content="US-CT">
@@ -51,7 +51,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="css/styles.css?v=8">
+  <link rel="stylesheet" href="css/styles.css?v=10">
 
   <!-- Page-specific style for service cards (asymmetric bento layout) -->
   <style>
@@ -510,9 +510,12 @@
       .service-card.card-full {
         grid-column: span 1;
         grid-template-columns: 1fr;
-        gap: 24px;
-        padding: 30px 26px;
+        gap: 0;
+        padding: 28px 24px;
       }
+      .service-card.card-featured-dark,
+      .service-card.card-wide,
+      .service-card.card-full { gap: 24px; }
       .service-card.card-featured-dark h3 { font-size: 1.4rem; }
       .service-card.card-featured-dark .card-visual { order: 2; }
       .service-card.card-full ul { grid-template-columns: 1fr; }
@@ -531,7 +534,7 @@
         "@type": "WebPage",
         "@id": "https://nj-developments.com/services",
         "url": "https://nj-developments.com/services",
-        "name": "Services — NJ Developments",
+        "name": "Services | NJ Developments",
         "description": "Web development, custom software, SEO, marketing, and more. Explore all the digital services NJ Developments offers.",
         "isPartOf": { "@id": "https://nj-developments.com/#website" },
         "breadcrumb": { "@id": "https://nj-developments.com/services#breadcrumb" }
@@ -587,7 +590,7 @@
             "item": {
               "@type": "Service",
               "name": "Google & SEO",
-              "description": "Show up when homeowners search for your trade in your area.",
+              "description": "Show up when people nearby search for what you do.",
               "provider": { "@id": "https://nj-developments.com/#organization" },
               "url": "https://nj-developments.com/services#google-seo"
             }
@@ -620,7 +623,7 @@
             "item": {
               "@type": "Service",
               "name": "Marketing & Ads",
-              "description": "Google Ads and social media advertising to reach homeowners in your service area.",
+              "description": "Google Ads and social media advertising to reach people in your service area.",
               "provider": { "@id": "https://nj-developments.com/#organization" },
               "url": "https://nj-developments.com/services#marketing-ads"
             }
@@ -649,13 +652,13 @@
   <!-- Navbar -->
   <nav class="navbar" aria-label="Main navigation">
     <div class="container">
-      <a href="index.html" class="nav-logo"><img src="images/NJDev_Logo.png" alt="NJ Developments" class="nav-logo-img"></a>
+      <a href="index.html" class="nav-logo"><img src="images/njdev-logo.svg" alt="NJ Developments" class="nav-logo-img" width="65" height="36"></a>
       <div class="nav-links">
         <a href="index.html">Home</a>
         <a href="services.html" class="active">Services</a>
         <a href="portfolio.html">Portfolio</a>
         <a href="about.html">About</a>
-        <a href="book.html" class="nav-cta">Book a Call &#8594;</a>
+        <a href="book.html" class="nav-cta">Start a project &#8594;</a>
       </div>
       <button class="hamburger" aria-label="Toggle navigation">
         <span></span>
@@ -672,7 +675,7 @@
     <div class="container">
       <span class="section-label">Our services</span>
       <h1>Tools that get you <em>more jobs.</em></h1>
-      <p>Websites, AI, and automation built for contractors who want to grow without spending all day on marketing.</p>
+      <p>Websites, AI, and automation built for local businesses that want to grow without spending all day on marketing.</p>
     </div>
   </section>
 
@@ -686,14 +689,14 @@
             <span class="featured-tag">Most popular</span>
             <div class="bento-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
             <h3>Websites that book jobs</h3>
-            <p>Professional sites that make homeowners pick up the phone.</p>
+            <p>Professional sites that make customers pick up the phone.</p>
             <ul>
               <li>Custom design with your branding</li>
-              <li>Mobile-friendly for on-the-go homeowners</li>
+              <li>Mobile-friendly for customers on the go</li>
               <li>Fast loading, no bloat</li>
               <li>Built to rank on Google from day one</li>
             </ul>
-            <a href="book.html" class="card-link">Get Started</a>
+            <a href="book.html" class="card-link">Start a project</a>
           </div>
           <div class="card-visual" aria-hidden="true">
             <div class="browser-mock">
@@ -719,7 +722,7 @@
             <li>Texts you a lead summary instantly</li>
             <li>Sounds professional, not robotic</li>
           </ul>
-          <a href="book.html" class="card-link">Get Started</a>
+          <a href="book.html" class="card-link">Start a project</a>
         </div>
 
         <div class="service-card fade-in" id="review-automation">
@@ -732,20 +735,20 @@
             <li>Follow-up if they don't respond</li>
             <li>More reviews = higher on Google Maps</li>
           </ul>
-          <a href="book.html" class="card-link">Get Started</a>
+          <a href="book.html" class="card-link">Start a project</a>
         </div>
 
         <div class="service-card fade-in" id="google-seo">
           <div class="bento-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
           <h3>Google &amp; SEO</h3>
-          <p>Show up when homeowners search for your trade in your area.</p>
+          <p>Show up when people nearby search for what you do.</p>
           <ul>
             <li>Google Business Profile optimization</li>
             <li>Local search rankings for your service area</li>
-            <li>"[Your trade] near me" visibility</li>
+            <li>"[Your service] near me" visibility</li>
             <li>Monthly reporting on traffic &amp; leads</li>
           </ul>
-          <a href="book.html" class="card-link">Get Started</a>
+          <a href="book.html" class="card-link">Start a project</a>
         </div>
 
         <div class="service-card fade-in" id="lead-followup">
@@ -758,7 +761,7 @@
             <li>Brings back leads you would've lost</li>
             <li>Runs on autopilot, zero effort from you</li>
           </ul>
-          <a href="book.html" class="card-link">Get Started</a>
+          <a href="book.html" class="card-link">Start a project</a>
         </div>
 
         <div class="service-card card-wide fade-in" id="custom-portals">
@@ -772,13 +775,13 @@
               <li>Internal team platforms</li>
               <li>Built to fit your workflow, not the other way around</li>
             </ul>
-            <a href="book.html" class="card-link">Get Started</a>
+            <a href="book.html" class="card-link">Start a project</a>
           </div>
           <div class="card-visual" aria-hidden="true">
             <div class="dash-mock">
               <div class="dash-tile t1">
                 <div class="dt-line short"></div>
-                <div class="dt-num">+38%</div>
+                <div class="dt-num">Jobs</div>
                 <div class="dt-line"></div>
               </div>
               <div class="dash-tile t2">
@@ -787,7 +790,7 @@
               </div>
               <div class="dash-tile t3">
                 <div class="dt-line dark short"></div>
-                <div class="dt-num">142 leads</div>
+                <div class="dt-num">New leads</div>
               </div>
             </div>
           </div>
@@ -796,14 +799,14 @@
         <div class="service-card fade-in" id="marketing-ads">
           <div class="bento-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
           <h3>Marketing &amp; Ads</h3>
-          <p>Reach homeowners in your service area who need work done now.</p>
+          <p>Reach people in your service area who need what you sell right now.</p>
           <ul>
             <li>Google Ads targeting your area</li>
             <li>Facebook &amp; Instagram ads</li>
             <li>Campaign setup &amp; management</li>
             <li>Track every dollar spent to leads generated</li>
           </ul>
-          <a href="book.html" class="card-link">Get Started</a>
+          <a href="book.html" class="card-link">Start a project</a>
         </div>
 
         <div class="service-card card-full fade-in" id="ongoing-support">
@@ -818,7 +821,7 @@
             <li>Content updates when you need them</li>
             <li>Monthly performance check-ins</li>
           </ul>
-          <a href="book.html" class="card-link">Get Started</a>
+          <a href="book.html" class="card-link">Start a project</a>
         </div>
 
       </div>
@@ -863,7 +866,7 @@
     <div class="container fade-in">
       <h2>Ready to get <em>more jobs?</em></h2>
       <p>Book a free call and we'll show you exactly what we can set up for your business.</p>
-      <a href="book.html" class="btn btn-glow">Book a Free Call</a>
+      <a href="book.html" class="btn btn-glow">Start your project &#8594;</a>
     </div>
   </section>
 
@@ -874,9 +877,9 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="nav-logo"><img src="images/NJDev_Logo.png" alt="NJ Developments" class="nav-logo-img"></a>
+          <a href="index.html" class="nav-logo"><img src="images/njdev-logo-light.svg" alt="NJ Developments" class="nav-logo-img" width="65" height="36" loading="lazy"></a>
           <div class="footer-brand-text">
-            <p>Websites, AI voice agents, and automated follow-up systems for service contractors in Connecticut.</p>
+            <p>Websites, AI voice agents, and automated follow-up systems for local businesses in Connecticut.</p>
             <div class="footer-socials">
               <a href="https://www.instagram.com/nj_developments_ct/" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
             </div>
@@ -893,7 +896,7 @@
         </div>
         <div class="footer-links">
           <h4>Services</h4>
-          <a href="services.html">Contractor Websites</a>
+          <a href="services.html">Business Websites</a>
           <a href="services.html">AI Voice Agent</a>
           <a href="services.html">SEO &amp; Google</a>
           <a href="services.html">Review Automation</a>
@@ -903,7 +906,7 @@
           <h4>Contact Us</h4>
           <p><a href="mailto:jamiah@nj-developments.com" class="contact-link">jamiah@nj-developments.com</a></p>
           <p><a href="tel:8608158662" class="contact-link">860-815-8662</a></p>
-          <p>2389 Main St<br>Glastonbury, CT 06033</p>
+          <p>Glastonbury, Connecticut</p>
           <p>Response within 24 hours</p>
         </div>
       </div>
@@ -919,8 +922,8 @@
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.63 3.38 2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6.29 6.29l.97-.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
       Call Us
     </a>
-    <a href="book.html" class="mobile-cta-start">Book a Call &rarr;</a>
+    <a href="book.html" class="mobile-cta-start">Start a project &rarr;</a>
   </div>
-  <script src="js/main.js?v=7"></script>
+  <script src="js/main.js?v=9"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 /* ============================================
-   NJ Developments — Main JS (v6)
+   NJ Developments, Main JS (v8)
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (founderBtns.length > 0) {
     const overlay = document.createElement('div');
     overlay.className = 'bcard-overlay';
-    overlay.innerHTML = '<div class="bcard-modal"><button class="bcard-close" aria-label="Close">&times;</button><img src="" alt="Business Card"></div>';
+    overlay.innerHTML = '<div class="bcard-modal"><button class="bcard-close" aria-label="Close">&times;</button><img alt="Business Card"></div>';
     document.body.appendChild(overlay);
 
     const modalImg = overlay.querySelector('.bcard-modal img');
@@ -284,35 +284,186 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // --- Logo marquee ---
-  const marqueeWrapper = document.getElementById('clientsWrapper');
-  if (marqueeWrapper) {
-    const row = document.getElementById('clientsTrackTop');
-    const rows = [row];
-    const imgs = marqueeWrapper.querySelectorAll('img');
-
-    function startMarquee() {
-      rows.forEach(r => r.classList.add('running'));
-      marqueeWrapper.classList.add('ready');
-    }
-
-    const imgPromises = Array.from(imgs).map(img => new Promise(resolve => {
-      if (img.complete && img.naturalWidth) resolve();
-      else {
-        img.addEventListener('load', resolve);
-        img.addEventListener('error', resolve);
-      }
-    }));
-    Promise.all(imgPromises).then(startMarquee);
-    setTimeout(startMarquee, 4000);
-
-    const pause = () => rows.forEach(r => r.classList.add('paused'));
-    const resume = () => rows.forEach(r => r.classList.remove('paused'));
-    marqueeWrapper.addEventListener('mouseenter', pause);
-    marqueeWrapper.addEventListener('mouseleave', resume);
-    marqueeWrapper.addEventListener('touchstart', pause, { passive: true });
-    marqueeWrapper.addEventListener('touchend', resume);
-    marqueeWrapper.addEventListener('touchcancel', resume);
+  // --- Mobile CTA bar: stay out of the way until the hero's own buttons scroll off ---
+  const ctaBar = document.querySelector('.mobile-cta-bar');
+  const heroButtons = document.querySelector('.hero-buttons');
+  if (ctaBar && heroButtons && 'IntersectionObserver' in window) {
+    ctaBar.classList.add('is-waiting');
+    new IntersectionObserver(([entry]) => {
+      ctaBar.classList.toggle('is-waiting', entry.isIntersecting || entry.boundingClientRect.top > 0);
+    }).observe(heroButtons);
   }
 
+  // --- Logo carousel: drifts on its own, drag or swipe to move it, stops while touched ---
+  const marquee = document.getElementById('clientsWrapper');
+  if (marquee) initLogoCarousel(marquee, document.querySelector('.marquee-toggle'));
+
 });
+
+function initLogoCarousel(wrapper, toggle) {
+  const row = wrapper.querySelector('.marquee-row');
+  const originals = Array.from(row.children);
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const SPEED = 36;            // px per second while drifting
+  const RESUME_AFTER = 2500;   // ms of no touching before it drifts again
+  const FRICTION = 0.004;      // fling velocity left after one second
+
+  let setWidth = 0, offset = 0, velocity = 0, rendered = NaN;
+  let dragging = false, hovering = false, focused = false, inView = true;
+  let userPaused = reduceMotion.matches;
+  let resumeAt = 0, lastTime = 0;
+  let pointerId = null, startX = 0, startOffset = 0, lastX = 0, lastMove = 0, moved = 0;
+
+  originals.forEach(a => { a.draggable = false; });
+
+  function build() {
+    row.querySelectorAll('[data-clone]').forEach(n => n.remove());
+    setWidth = row.getBoundingClientRect().width;
+    if (!setWidth) return;
+    const copies = Math.ceil(wrapper.clientWidth / setWidth) + 1;
+    for (let c = 0; c < copies; c++) {
+      originals.forEach(node => {
+        const clone = node.cloneNode(true);
+        clone.setAttribute('aria-hidden', 'true');
+        clone.tabIndex = -1;
+        clone.dataset.clone = '';
+        row.appendChild(clone);
+      });
+    }
+    rendered = NaN;
+    wrapper.classList.add('ready');
+  }
+
+  function wrap() {
+    if (setWidth) offset = ((offset % setWidth) + setWidth) % setWidth;
+  }
+
+  function render() {
+    wrap();
+    if (offset === rendered) return;
+    rendered = offset;
+    row.style.transform = 'translate3d(' + (-offset).toFixed(2) + 'px,0,0)';
+  }
+
+  function drifting(now) {
+    return !userPaused && !dragging && !hovering && !focused && inView && now >= resumeAt;
+  }
+
+  function tick(now) {
+    const dt = lastTime ? Math.min(now - lastTime, 64) / 1000 : 0;
+    lastTime = now;
+    if (!dragging) {
+      if (Math.abs(velocity) > 8) {
+        offset += velocity * dt;
+        velocity *= Math.pow(FRICTION, dt);
+      } else {
+        velocity = 0;
+        if (drifting(now)) offset += SPEED * dt;
+      }
+    }
+    render();
+    requestAnimationFrame(tick);
+  }
+
+  wrapper.addEventListener('pointerdown', e => {
+    if (e.pointerType === 'mouse' && e.button !== 0) return;
+    dragging = true;
+    pointerId = e.pointerId;
+    velocity = 0;
+    startX = lastX = e.clientX;
+    startOffset = offset;
+    lastMove = performance.now();
+    moved = 0;
+  });
+
+  wrapper.addEventListener('pointermove', e => {
+    if (!dragging || e.pointerId !== pointerId) return;
+    const dx = e.clientX - startX;
+    moved = Math.max(moved, Math.abs(dx));
+    if (moved > 5 && !wrapper.classList.contains('is-dragging')) {
+      wrapper.classList.add('is-dragging');
+      try { wrapper.setPointerCapture(e.pointerId); } catch (_) {}
+    }
+    const now = performance.now();
+    const step = now - lastMove;
+    if (step > 0) velocity = 0.75 * (-(e.clientX - lastX) / step * 1000) + 0.25 * velocity;
+    lastX = e.clientX;
+    lastMove = now;
+    offset = startOffset - dx;
+  });
+
+  function release(e, fling) {
+    if (!dragging || e.pointerId !== pointerId) return;
+    dragging = false;
+    pointerId = null;
+    wrapper.classList.remove('is-dragging');
+    if (!fling || performance.now() - lastMove > 90) velocity = 0;
+    velocity = Math.max(-3000, Math.min(3000, velocity));
+    resumeAt = performance.now() + RESUME_AFTER;
+  }
+  wrapper.addEventListener('pointerup', e => release(e, true));
+  wrapper.addEventListener('pointercancel', e => release(e, false));
+
+  // A drag that ends over a logo must not open that client's site.
+  wrapper.addEventListener('click', e => {
+    if (moved > 5) { e.preventDefault(); e.stopPropagation(); }
+  }, true);
+
+  wrapper.addEventListener('pointerenter', e => { if (e.pointerType === 'mouse') hovering = true; });
+  wrapper.addEventListener('pointerleave', e => {
+    if (e.pointerType === 'mouse') { hovering = false; resumeAt = performance.now() + 600; }
+  });
+
+  // Sideways trackpad swipes move it too; vertical wheel still scrolls the page.
+  wrapper.addEventListener('wheel', e => {
+    if (Math.abs(e.deltaX) <= Math.abs(e.deltaY)) return;
+    e.preventDefault();
+    velocity = 0;
+    offset += e.deltaX;
+    resumeAt = performance.now() + RESUME_AFTER;
+  }, { passive: false });
+
+  // Keyboard: stop and bring the focused logo into view.
+  wrapper.addEventListener('focusin', e => {
+    focused = true;
+    const link = e.target.closest('a');
+    if (!link) return;
+    const left = link.offsetLeft - offset;
+    if (left < 0 || left + link.offsetWidth > wrapper.clientWidth) {
+      offset = link.offsetLeft - (wrapper.clientWidth - link.offsetWidth) / 2;
+    }
+  });
+  wrapper.addEventListener('focusout', () => { focused = false; });
+  wrapper.addEventListener('scroll', () => { wrapper.scrollLeft = 0; });
+
+  if (toggle) {
+    const sync = () => {
+      toggle.setAttribute('aria-pressed', String(userPaused));
+      toggle.setAttribute('aria-label', userPaused ? 'Play client logos' : 'Pause client logos');
+    };
+    toggle.addEventListener('click', () => {
+      userPaused = !userPaused;
+      resumeAt = 0;
+      sync();
+    });
+    sync();
+  }
+
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(entries => { inView = entries[0].isIntersecting; }).observe(wrapper);
+  }
+
+  let resizeTimer, lastWidth = window.innerWidth;
+  window.addEventListener('resize', () => {
+    if (window.innerWidth === lastWidth) return;
+    lastWidth = window.innerWidth;
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(build, 150);
+  });
+  row.querySelectorAll('img').forEach(img => {
+    if (!img.complete) img.addEventListener('load', build, { once: true });
+  });
+
+  build();
+  requestAnimationFrame(tick);
+}

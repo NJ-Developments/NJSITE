@@ -1,9 +1,16 @@
 {
   "hosting": {
+    "site": "njdevelopmentsales",
     "public": ".",
     "ignore": [
       "firebase.json",
       "**/.*",
+      ".git/**",
+      ".claude/**",
+      ".vscode/**",
+      ".github/**",
+      ".idea/**",
+      "tools/**",
       "**/node_modules/**",
       "README.md",
       "**/*.log"

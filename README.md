@@ -1,6 +1,6 @@
-# NJ Developments — Marketing Site
+# NJ Developments Marketing Site
 
-The marketing site for **NJ Developments LLC** — a Connecticut-based agency building websites, AI voice agents, and automated follow-up systems for local service businesses.
+The marketing site for **NJ Developments LLC**, a Connecticut-based agency building websites, AI voice agents, and automated follow-up systems for local service businesses.
 
 Live: <https://nj-developments.com>
 
@@ -15,7 +15,7 @@ Live: <https://nj-developments.com>
 | Scripts | One `js/main.js` for nav, scroll progress, fade-ins, marquee, business-card modal |
 | Fonts | `Inter` (body, UI) + `Instrument Serif` (display / editorial accents), both from Google Fonts |
 | Inquiry + bookings | Embedded GoHighLevel form-first calendar widget |
-| Analytics | Google Analytics (GA4 — `G-WZQ2CGG93L`) |
+| Analytics | Google Analytics (GA4, `G-WZQ2CGG93L`) |
 | Hosting | Firebase Hosting (config in `firebase.json`, project in `.firebaserc`) |
 
 No build step. Edit a file, commit, deploy.
@@ -43,7 +43,7 @@ NJSITE/
 │
 ├── images/
 │   ├── NJDev_Logo.{png,svg}                Brand logo
-│   ├── cedar-preview.png                   Hand-picked screenshot used as portfolio thumbnail
+│   ├── work/                               Site screenshots used as portfolio + homepage previews
 │   ├── clients/                            Client logos (used on marquee + portfolio)
 │   ├── headshots/                          Founder portraits (used on About page)
 │   └── business-cards/                     Founder business-card images (used in modal)
@@ -63,8 +63,7 @@ NJSITE/
 ## Design system
 
 ### Type
-- **Display / editorial moments** — `Instrument Serif` at regular weight, italics used for accent words ("booking you *jobs*", "more *jobs*", "real *results*")
-- **Body / UI** — `Inter` 400 / 500 / 600 / 700 / 800
+- **Everything:** `Inter` 400 / 500 / 600 / 700 / 800. One family since v10 (2026-11-06); accent words are teal (`.accent`), not a second typeface.
 
 ### Color tokens (defined in `:root` of `css/styles.css`)
 | Token | Value | Usage |
@@ -79,30 +78,30 @@ NJSITE/
 ### Shadows & radii
 `--sh-{1,2,3}` + `--sh-glow` for elevation; `--r-{xs,sm,md,lg,xl,pill}` for corner rounding.
 
-### Reusable components (shared classes — used across multiple pages)
-- `.navbar` + `.navbar-dark` — frosted floating pill
-- `.hero-dark` with `.hero-mesh` + `.hero-grid-bg` + `.hero-grain` — editorial dark hero
-- `.page-header` — gradient-tinted hero for non-home pages
+### Reusable components (shared classes, used across multiple pages)
+- `.navbar` + `.navbar-dark`: frosted floating pill
+- `.hero-dark` with `.hero-mesh` + `.hero-grid-bg` + `.hero-grain`: editorial dark hero
+- `.page-header`: gradient-tinted hero for non-home pages
 - `.section` + `.section-soft` / `.section-dark` / `.section-white`
-- `.section-label` / `.eyebrow` — uppercase eyebrow with teal dot
-- `.serif-accent` — italic teal-gradient serif for accent words
-- `.bento` + `.bento-lg` / `.bento-md` / `.bento-sm` / `.bento-wide` — bento grid cards with `bento-visual` mockups inside
-- `.process-timeline` + `.process-card` — numbered step cards
-- `.testimonial-block` — oversized serif pull-quote card
-- `.faq-list` + `.faq-item` (uses `<details>`) — accordion FAQ
-- `.cta-banner` — dark CTA section with mesh gradient
-- `.footer` — dark footer with brand / links / contact columns
-- `.mobile-cta-bar` — sticky bottom call/book bar on mobile
-- `.btn-{glow,primary,outline,ghost,white,link}` — button styles
-- `.fade-in` / `.fade-in.visible` — scroll-triggered entrance (JS-gated via `body.js-ready` so no-JS users see content)
+- `.section-label` / `.eyebrow`: uppercase eyebrow with teal dot
+- `.serif-accent` / `.accent`: teal accent for highlighted words
+- `.bento` + `.bento-lg` / `.bento-md` / `.bento-sm` / `.bento-wide`: bento grid cards with `bento-visual` mockups inside
+- `.process-timeline` + `.process-card`: numbered step cards
+- `.testimonial-block`: oversized pull-quote card
+- `.faq-list` + `.faq-item` (uses `<details>`): accordion FAQ
+- `.cta-banner`: dark CTA section with mesh gradient
+- `.footer`: dark footer with brand / links / contact columns
+- `.mobile-cta-bar`: sticky bottom call/book bar on mobile
+- `.btn-{glow,primary,outline,ghost,white,link}`: button styles
+- `.fade-in` / `.fade-in.visible`: scroll-triggered entrance (JS-gated via `body.js-ready` so no-JS users see content)
 
 ### Bento visual variants (homepage services grid)
 Each service card uses a dark gradient `bento-visual` container with one of these illustrations inside:
-- `.bento-browser` — full browser mockup (Professional Websites)
-- `.visual-call` — phone with incoming-call pulse ring (AI Voice Agent)
-- `.visual-review` — floating Google review card with star badge (Review & Follow-Up)
-- `.visual-search` — search bar w/ blinking cursor + map-pin result (SEO & Google Maps)
-- `.visual-chat` — chat bubbles with typing indicator (Lead Follow-Up)
+- `.bento-browser`: full browser mockup (Professional Websites)
+- `.visual-call`: phone with incoming-call pulse ring (AI Voice Agent)
+- `.visual-review`: floating Google review card with star badge (Review & Follow-Up)
+- `.visual-search`: search bar w/ blinking cursor + map-pin result (SEO & Google Maps)
+- `.visual-chat`: chat bubbles with typing indicator (Lead Follow-Up)
 
 ---
 
@@ -124,15 +123,17 @@ firebase serve --only hosting
 Then open `http://localhost:8765`.
 
 ### After editing CSS / JS
-Bump the `?v=` query string on the `styles.css` / `main.js` references in every HTML file to bust cache. Styles are currently at `v=8`; JavaScript is at `v=7`.
+Bump the `?v=` query string on the `styles.css` / `main.js` references in every HTML file to bust cache. Styles are currently at `v=10`; JavaScript is at `v=9`.
 
 ---
 
 ## Deploying
 
 ```bash
-firebase deploy --only hosting
+firebase deploy --only hosting:njdevelopmentsales
 ```
+
+The `njdevelopmentsales` project also hosts other client sites, so always name the site. Deploy from a clean checkout of `main` (a working folder with local edits ships them).
 
 `firebase.json` controls rewrites (pretty URLs like `/services`, `/portfolio`, etc.) and caching headers.
 
@@ -163,11 +164,18 @@ Blog posts include `BlogPosting` schema with `datePublished` and author.
 
 ## Adding a new portfolio item
 
-1. Drop the client logo into `images/clients/`.
-2. Add an `<a>` to **both** marquee rows in `index.html` and `portfolio.html` (logos appear twice for the seamless infinite scroll).
-3. Add a `.portfolio-card` block to `portfolio.html` — use an `<iframe>` preview for live sites, or a screenshot in `images/` for slow / non-embeddable ones.
-4. Optionally feature it in `index.html`'s "Featured Work" section.
+1. Drop the client logo into `images/clients/marquee/` and add an `<a>` to the marquee row in `index.html` and `portfolio.html` (the JS clones it for the loop).
+2. Add screenshots `images/work/live/<key>-desktop.webp` (1200x750, shot at 1440x900) and `<key>-phone.webp` (390x844), taken after scrolling the page once so fade-in sections render. The monthly refresh keeps them current after that.
+3. Add a `.work-card` to the grid in `portfolio.html` (copy an existing one: kind, name, one-line description, tags, link). The `alt` must read `<Name> homepage`, the refresh job finds cards by it.
+4. Optionally put it in the home page "Our work" grid in `index.html` (six cards there).
 5. Add the item to the `ItemList` JSON-LD in `portfolio.html`.
+6. Clients we leave off on purpose: tell Javi, the refresh job keeps that list (it is not in this repo).
+
+## Monthly refresh (automatic)
+
+Client screenshots in `images/work/live/` are refreshed on the 1st of every month by an automated job that runs outside this repo. It re-shoots every client site shown on the home page and portfolio, and ships new screenshots only when all of this holds: the repo is clean and on `origin/main`, live matches the repo byte for byte for every deployed file (if someone deployed without committing, or committed without deploying, it stops), every link and image resolves, JSON-LD parses, no em dashes, and the preview channel serves the new files. It ships as a normal commit (the new screenshots, a `?v=` bump on their `<img>` tags so browsers fetch them, sitemap dates), pushes to `main`, deploys, checks live, and rolls back by itself if live does not serve the new files. A client site that is down, shows an error page, renders blank, or changed beyond recognition keeps its old screenshot and gets reported for a human to look at.
+
+So: **commit and push what you deploy, and deploy what you push to main**, or the monthly refresh will refuse to run (and tell you why).
 
 ## Adding a client testimonial
 
@@ -177,12 +185,12 @@ Edit the `.testimonial-block` in `index.html`. Quote text goes in `<blockquote><
 
 ## Contact / business info (kept consistent across pages)
 
-- **Email** — `jamiah@nj-developments.com`
-- **Phone** — `860-815-8662`
-- **Business address** — `2389 Main St, Glastonbury, CT 06033`
-- **Instagram** — [@nj_developments_ct](https://www.instagram.com/nj_developments_ct/)
-- **Project inquiry** — `https://nj-developments.com/book`
-- **GHL widget** — permanent calendar ID `4fl6kTMdXBi20NflHTic`
+- **Email:** `jamiah@nj-developments.com`
+- **Phone:** `860-815-8662`
+- **Location shown on the site:** `Glastonbury, Connecticut` (2389 Main St is the registered agent's address: fine on the legal pages, not shown as an office)
+- **Instagram:** [@nj_developments_ct](https://www.instagram.com/nj_developments_ct/)
+- **Project inquiry:** `https://nj-developments.com/book`
+- **GHL widget:** permanent calendar ID `4fl6kTMdXBi20NflHTic`
 
 Founders: Jamiah Bartlett, Javier Flores, Nolan Krieger.
 

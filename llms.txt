@@ -6,14 +6,14 @@ NJ Developments LLC builds fast, conversion-focused websites and layers AI autom
 
 ## What we do
 
-- **Contractor Websites** — Static, fast, mobile-first sites built to rank on Google and convert visitors into booked jobs.
-- **AI Voice Agents** — 24/7 phone coverage that captures lead details and texts them to the owner.
-- **Review Automation** — Automatic post-job Google review requests.
-- **Lead Follow-Up** — Automated SMS follow-ups so no inquiry slips.
-- **Google & Local SEO** — Google Business Profile, local rankings, monthly reporting.
-- **Custom Portals & Internal Tools** — Dashboards, client portals, job tracking.
-- **Marketing & Ads** — Google Ads and social advertising.
-- **Ongoing Support** — Hosting, updates, monthly performance check-ins.
+- **Contractor Websites**: Static, fast, mobile-first sites built to rank on Google and convert visitors into booked jobs.
+- **AI Voice Agents**: 24/7 phone coverage that captures lead details and texts them to the owner.
+- **Review Automation**: Automatic post-job Google review requests.
+- **Lead Follow-Up**: Automated SMS follow-ups so no inquiry slips.
+- **Google & Local SEO**: Google Business Profile, local rankings, monthly reporting.
+- **Custom Portals & Internal Tools**: Dashboards, client portals, job tracking.
+- **Marketing & Ads**: Google Ads and social advertising.
+- **Ongoing Support**: Hosting, updates, monthly performance check-ins.
 
 ## How to engage
 
@@ -24,7 +24,7 @@ NJ Developments LLC builds fast, conversion-focused websites and layers AI autom
 
 ## Featured guides
 
-- [How to Hire a Web Designer in Connecticut — 2026 Buyer's Guide](https://nj-developments.com/blog-how-to-hire-web-designer-connecticut): Practical guide to pricing tiers, what to ask, red flags, and how to match a CT web designer to your scope.
+- [How to Hire a Web Designer in Connecticut: 2026 Buyer's Guide](https://nj-developments.com/blog-how-to-hire-web-designer-connecticut): Practical guide to pricing tiers, what to ask, red flags, and how to match a CT web designer to your scope.
 - [Web Design Agency Serving Hartford, New Haven, Stamford & All of CT](https://nj-developments.com/blog-web-design-connecticut-towns): Town-by-town breakdown of CT web design coverage.
 
 ## Key pages

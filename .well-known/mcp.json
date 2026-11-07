@@ -3,7 +3,7 @@
   "version": "1.0",
   "name": "nj-developments",
   "title": "NJ Developments Public Info",
-  "description": "Read-only public information about NJ Developments — services, portfolio, pricing, contact. No authentication required.",
+  "description": "Read-only public information about NJ Developments: services, portfolio, pricing, contact. No authentication required.",
   "provider": {
     "name": "NJ Developments LLC",
     "url": "https://nj-developments.com"

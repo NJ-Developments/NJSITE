@@ -1,4 +1,4 @@
-# NJ Developments — robots.txt
+# NJ Developments robots.txt
 # Content Signals (https://github.com/ai-robots-txt/ai.robots.txt)
 # Human search is allowed. AI training without license is not.
 Content-Usage: search
@@ -19,7 +19,7 @@ User-agent: Bingbot
 Allow: /
 Crawl-delay: 10
 
-# AI crawlers — allowed for search/indexing, blocked from training ingestion.
+# AI crawlers: allowed for search/indexing, blocked from training ingestion.
 # Per RFC 9309 + emerging AI bot conventions.
 
 User-agent: GPTBot
