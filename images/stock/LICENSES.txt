@@ -1,0 +1,10 @@
+Stock photos used on the homepage. All from Unsplash, free for commercial use under the Unsplash License (https://unsplash.com/license).
+
+- on-the-phone.webp: https://unsplash.com/photos/a-man-wearing-a-helmet-talking-on-a-cell-phone-mi3baLFzZtA by Thi Nguyen Duc (Unsplash License, free commercial use)
+- cafe-owners.webp: https://unsplash.com/photos/two-smiling-cafe-workers-stand-behind-a-counter-2oGwk-qFAhE by Vitaly Gariev (Unsplash License, free commercial use)
+- front-door.webp: https://unsplash.com/photos/man-in-white-dress-shirt-standing-beside-woman-in-gray-cardigan-1El98zbDWzA by Hannah Bechtel (Unsplash License, free commercial use)
+- roof-crew.webp: https://unsplash.com/photos/a-couple-of-people-that-are-on-a-roof-MyBBMM317A4 by Raze Solar (Unsplash License, free commercial use)
+- owner-open-sign.webp: https://unsplash.com/photos/two-people-holding-open-sign-in-cafe-61StbpYJ4gY by Vitaly Gariev (Unsplash License, free commercial use)
+- owner-trades.webp: https://unsplash.com/photos/man-in-blue-work-uniform-F4ox6XvbDps by Divaris Shirichena (Unsplash License, free commercial use)
+- owner-mechanic.webp: https://unsplash.com/photos/man-in-gray-button-up-shirt-and-black-pants-standing-near-black-and-red-power-tool-udEWM2jLBVg by Jarred Ray (Unsplash License, free commercial use)
+- owner-baker.webp: https://unsplash.com/photos/a-man-with-a-beard-and-glasses-standing-in-front-of-a-counter-LnPA93Jenmw by Maks Styazhkin (Unsplash License, free commercial use)

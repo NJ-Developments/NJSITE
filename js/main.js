@@ -439,7 +439,7 @@ function initLogoCarousel(wrapper, toggle) {
   if (toggle) {
     const sync = () => {
       toggle.setAttribute('aria-pressed', String(userPaused));
-      toggle.setAttribute('aria-label', userPaused ? 'Play client logos' : 'Pause client logos');
+      toggle.setAttribute('aria-label', userPaused ? 'Play the client carousel' : 'Pause the client carousel');
     };
     toggle.addEventListener('click', () => {
       userPaused = !userPaused;
