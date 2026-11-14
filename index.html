@@ -41,8 +41,8 @@
   <link rel="dns-prefetch" href="//fonts.gstatic.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <meta name="theme-color" content="#0a0e1a">
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#071a2b">
   <meta name="author" content="NJ Developments">
   <meta name="geo.region" content="US-CT">
   <meta name="geo.placename" content="Connecticut">
@@ -53,6 +53,7 @@
   <link rel="manifest" href="manifest.json">
   <link rel="preload" href="images/njdev-logo.svg" as="image" type="image/svg+xml">
   <link rel="stylesheet" href="css/styles.css?v=10">
+  <link rel="stylesheet" href="css/v12.css?v=8">
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -149,58 +150,12 @@
             { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lead Follow-Up", "description": "Automated text follow-ups so no lead slips through the cracks." } }
           ]
         }
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "What does NJ Developments do?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "We build professional websites, set up AI voice agents that answer your calls 24/7, automate Google review requests after every job, and handle your SEO so customers find you on Google. Everything a local service business needs to get more customers without spending time on marketing."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How fast can you build my website?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Most websites go from concept to launch in 1-2 weeks. We move fast because you need to start getting leads, not wait around for months."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "I already get work from referrals. Why do I need a website?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Referrals are great, but they have a ceiling. A website means people searching for what you do in your area find you on Google too. That's a second pipeline of leads you're missing right now. Plus, when someone gets a referral, the first thing they do is Google you. If you don't show up or your site looks bad, you lose the job before you even know about it."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What's an AI voice agent?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "It's an AI that answers your phone when you can't. If you're with a customer, driving, or it's after hours, the voice agent picks up, gets the caller's name, what they need, and their contact info, then texts it to you. You call them back when you're free instead of losing them to a competitor who picks up."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do you provide ongoing support after launch?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. We handle hosting, updates, and support on a monthly basis. You focus on running your business, we keep everything running online."
-            }
-          }
-        ]
       }
     ]
   }
   </script>
 </head>
-<body>
-
+<body class="v12">
   <a href="#main-content" class="skip-to-content">Skip to main content</a>
 
   <!-- Navbar -->
@@ -222,38 +177,31 @@
     </div>
   </nav>
 
+  
   <main id="main-content">
 
-  <!-- Hero: the work up front -->
-  <section class="hero-work">
-    <div class="container hero-work-grid">
-      <div class="hero-work-copy">
-        <h1>Your website should be <span class="accent">growing your business.</span></h1>
-        <p class="hero-work-sub">We design and hand-code websites for local businesses, then add the AI phone answering, review requests and follow-up texts that turn visitors into customers.</p>
-        <div class="hero-buttons">
-          <a href="book.html" class="btn btn-glow">Start your project &#8594;</a>
-          <a href="tel:8608158662" class="btn btn-outline btn-call"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3.5c.6 0 1.1.4 1.3 1l.85 2.9a1.4 1.4 0 0 1-.38 1.4L7.1 10.1a12 12 0 0 0 5.8 5.8l1.3-1.28a1.4 1.4 0 0 1 1.4-.38l2.9.85c.6.18 1 .73 1 1.35v2.2c0 1-.82 1.8-1.83 1.72A15.7 15.7 0 0 1 4.28 5.33 1.8 1.8 0 0 1 6 3.5z"/></svg>Call 860-815-8662</a>
+  <section class="x-hero">
+    <div class="x-wrap x-hero-grid">
+      <div>
+        <p class="x-rating"><span class="x-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0 on Google &middot; Glastonbury, CT</p>
+        <h1 class="x-h1">More calls. More booked jobs.</h1>
+        <p class="x-hero-sub">Websites, AI phone answering and Google reviews for Connecticut businesses.</p>
+        <div class="x-cta-row hero-buttons">
+          <a href="book.html" class="x-btn">Book a free call</a>
+          <a href="#work" class="x-btn x-btn-quiet">See our work</a>
         </div>
-        <p class="hero-work-note">Glastonbury, CT. Free strategy call.</p>
       </div>
-      <figure class="hero-work-shot">
-        <a href="https://cedarstonetreeworks.com/" target="_blank" rel="noopener" class="browser-frame">
-          <span class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>cedarstonetreeworks.com</span></span>
-          <img src="images/work/live/cedar-desktop.webp" alt="Cedar Stone Tree Works homepage on a laptop" width="1200" height="750" fetchpriority="high">
-        </a>
-        <a href="https://katzhardware.com/" target="_blank" rel="noopener" class="phone-frame">
-          <img src="images/work/live/katz-phone.webp" alt="Katz Ace Hardware homepage on a phone" width="390" height="844" fetchpriority="high">
-        </a>
-        <figcaption>Live now: Cedar Stone Tree Works and Katz Ace Hardware, built by us.</figcaption>
-      </figure>
+      <div class="x-collage">
+        <figure><img src="images/stock/owner-open-sign.webp" alt="Two cafe owners holding a Yes we're open sign" width="640" height="800" fetchpriority="high"><figcaption>Restaurants</figcaption></figure>
+        <figure><img src="images/stock/owner-trades.webp" alt="Smiling tradesman in a work uniform" width="640" height="800" fetchpriority="high"><figcaption>Contractors</figcaption></figure>
+        <figure><img src="images/stock/owner-mechanic.webp" alt="Mechanic standing in his shop" width="640" height="800" loading="lazy"><figcaption>Auto shops</figcaption></figure>
+        <figure><img src="images/stock/owner-baker.webp" alt="Baker smiling behind his counter" width="640" height="800" loading="lazy"><figcaption>Local shops</figcaption></figure>
+      </div>
     </div>
   </section>
 
-  <!-- Client Logo Marquee -->
-  <section class="logo-marquee">
-    <div class="container">
-      <span class="marquee-label">Trusted by local businesses</span>
-    </div>
+  <section class="x-logos" aria-label="Clients">
+    <p class="x-logos-label">Trusted by local businesses</p>
     <div class="marquee-track-wrapper" id="clientsWrapper" role="region" aria-label="Client logos, drag or swipe to browse">
       <div class="marquee-row" id="clientsTrackTop">
         <a href="https://cedarstonetreeworks.com/" target="_blank" rel="noopener"><img src="images/clients/marquee/cedar-logo.png" alt="Cedar Stone Tree Works" width="140" height="112"></a>
@@ -274,347 +222,179 @@
     </div>
   </section>
 
-  <!-- Our work -->
-  <section class="section work-section" id="work">
-    <div class="container">
-      <div class="section-header fade-in">
-        <h2>Every site looks like its business, <span class="accent">not like ours.</span></h2>
-        <p>A tree service, a hardware store, a networking association, a Brooklyn restaurant. Each one is built from scratch for the people who use it.</p>
-      </div>
-      <div class="work-grid">
-        <a href="https://cedarstonetreeworks.com/" target="_blank" rel="noopener" class="work-card fade-in">
-          <div class="work-img"><img src="images/work/live/cedar-desktop.webp" alt="Cedar Stone Tree Works homepage" width="1200" height="750" loading="lazy"></div>
-          <div class="work-body">
-            <div class="work-kind">Tree service, Connecticut</div>
-            <h3>Cedar Stone Tree Works</h3>
-            <div class="work-desc">A free-estimate form and a tap-to-call button right up top, so a customer with a downed limb reaches them in one step.</div>
-            <div class="work-link">cedarstonetreeworks.com <span aria-hidden="true">&#8599;</span></div>
-          </div>
-        </a>
-        <a href="https://katzhardware.com/" target="_blank" rel="noopener" class="work-card fade-in">
-          <div class="work-img"><img src="images/work/live/katz-desktop.webp" alt="Katz Ace Hardware homepage" width="1200" height="750" loading="lazy"></div>
-          <div class="work-body">
-            <div class="work-kind">Hardware store, Glastonbury CT</div>
-            <h3>Katz Ace Hardware</h3>
-            <div class="work-desc">Departments, brands and store info for a Glastonbury fixture since 1920, with call and directions one tap away on a phone.</div>
-            <div class="work-link">katzhardware.com <span aria-hidden="true">&#8599;</span></div>
-          </div>
-        </a>
-        <a href="https://thecbna.org/" target="_blank" rel="noopener" class="work-card fade-in">
-          <div class="work-img"><img src="images/work/live/cbna-desktop.webp" alt="Connecticut Business Networking Association homepage" width="1200" height="750" loading="lazy"></div>
-          <div class="work-body">
-            <div class="work-kind">Business association, Connecticut</div>
-            <h3>Connecticut Business Networking Association</h3>
-            <div class="work-desc">Chapter directories, event listings and membership management for a growing referral network.</div>
-            <div class="work-link">thecbna.org <span aria-hidden="true">&#8599;</span></div>
-          </div>
-        </a>
-        <a href="https://taquitosmexicorestaurant.com/" target="_blank" rel="noopener" class="work-card fade-in">
-          <div class="work-img"><img src="images/work/live/taquitos-desktop.webp" alt="Taquitos Mexico homepage" width="1200" height="750" loading="lazy"></div>
-          <div class="work-body">
-            <div class="work-kind">Restaurant, Brooklyn NY</div>
-            <h3>Taquitos Mexico</h3>
-            <div class="work-desc">Online ordering and all three locations up front, for people deciding where to eat in the next ten minutes.</div>
-            <div class="work-link">taquitosmexicorestaurant.com <span aria-hidden="true">&#8599;</span></div>
-          </div>
-        </a>
-        <a href="https://rbmbrokerage.com/" target="_blank" rel="noopener" class="work-card fade-in">
-          <div class="work-img"><img src="images/work/live/rbm-desktop.webp" alt="RBM Brokerage homepage" width="1200" height="750" loading="lazy"></div>
-          <div class="work-body">
-            <div class="work-kind">Real estate, Brooklyn NY</div>
-            <h3>RBM Brokerage</h3>
-            <div class="work-desc">Property listings, free building-valuation requests and investor signups that turn visitors into leads.</div>
-            <div class="work-link">rbmbrokerage.com <span aria-hidden="true">&#8599;</span></div>
-          </div>
-        </a>
-        <a href="https://reignabundantia.com/en" target="_blank" rel="noopener" class="work-card fade-in">
-          <div class="work-img"><img src="images/work/live/reign-desktop.webp" alt="Reign Haus of Abundancia homepage" width="1200" height="750" loading="lazy"></div>
-          <div class="work-body">
-            <div class="work-kind">Financial education coach</div>
-            <h3>Reign Haus of Abundancia</h3>
-            <div class="work-desc">A bilingual English and Spanish site with consultation booking built in.</div>
-            <div class="work-link">reignabundantia.com <span aria-hidden="true">&#8599;</span></div>
-          </div>
-        </a>
-      </div>
-      <div class="section-more fade-in">
-        <a href="portfolio.html" class="btn btn-outline">See all our work &#8594;</a>
+  <section class="x-section x-sand">
+    <div class="x-wrap x-split">
+      <div class="x-photo"><img src="images/stock/roof-crew.webp" alt="Roofing crew busy on a job" width="2000" height="1333" loading="lazy"></div>
+      <div>
+        <h2 class="x-h2">Most local businesses don't have a lead problem.</h2>
+        <p class="x-lede">They have a website problem.</p>
+        <ol class="x-points">
+          <li><span class="x-num">01</span><div><h3>Calls go to voicemail.</h3><p>If nobody picks up, they call the next company on Google.</p></div></li>
+          <li><span class="x-num">02</span><div><h3>Nobody finds you on Google.</h3><p>Even referrals look you up first. If you don't show up, you lose the job.</p></div></li>
+          <li><span class="x-num">03</span><div><h3>The site makes you look small.</h3><p>An old, slow site makes a good business look like a risk.</p></div></li>
+        </ol>
       </div>
     </div>
   </section>
 
-  <!-- Testimonials -->
-  <section class="section section-soft">
-    <div class="container">
-      <div class="section-header fade-in">
-        <h2>What our clients say.</h2>
+  <section class="x-section">
+    <div class="x-wrap">
+      <div class="x-center">
+        <h2 class="x-h2">Everything between a search and a booked job.</h2>
       </div>
-      <div class="testimonials-grid">
-        <div class="testimonial-block fade-in">
-          <blockquote>
-            <p>Extremely happy with how our website turned out. It's better than most of my competitors' sites, and we've already gotten leads from the contact form. These guys know what they're doing.</p>
-          </blockquote>
-          <div class="testimonial-author">
-            <img src="images/clients/cedar-logo.png" alt="Cedar Stone Tree Works" class="testimonial-avatar" loading="lazy">
-            <div>
-              <strong>Merick</strong>
-              <span>Owner, Cedar Stone Tree Works</span>
+      <div class="x-features">
+
+        <div class="x-feature">
+          <div class="x-feature-text">
+            <h3>A website built to get calls</h3>
+            <p>Designed and hand-coded for your business, fast on a phone and live in 1-2 weeks.</p>
+            <ul class="x-checks">
+              <li>Tap-to-call and quote forms up top</li>
+              <li>Set up for Google from day one</li>
+              <li>Hosting, updates and backups handled</li>
+            </ul>
+          </div>
+          <figure class="hero-work-shot">
+            <a href="https://cedarstonetreeworks.com/" target="_blank" rel="noopener" class="browser-frame">
+              <span class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>cedarstonetreeworks.com</span></span>
+              <img src="images/work/live/cedar-desktop.webp" alt="Cedar Stone Tree Works homepage on a laptop" width="1200" height="750" loading="lazy">
+            </a>
+            <a href="https://katzhardware.com/" target="_blank" rel="noopener" class="phone-frame">
+              <img src="images/work/live/katz-phone.webp" alt="Katz Ace Hardware homepage on a phone" width="390" height="844" loading="lazy">
+            </a>
+          </figure>
+        </div>
+
+        <div class="x-feature x-flip">
+          <div class="x-feature-text">
+            <h3>AI that answers when you can't</h3>
+            <p>It picks up 24/7, gets the caller's name and what they need, and texts it to you.</p>
+            <ul class="x-checks">
+              <li>Answers after hours and on job sites</li>
+              <li>Every lead texted to your phone</li>
+              <li>You call back when you're free</li>
+            </ul>
+          </div>
+          <div class="x-stage">
+            <div class="x-photo"><img src="images/stock/on-the-phone.webp" alt="Contractor answering a call" width="1200" height="800" loading="lazy"></div>
+            <div class="x-card" aria-hidden="true">
+              <div class="x-card-top"><span class="x-card-dot"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 15.5c-1.2 0-2.4-.2-3.6-.6a1 1 0 0 0-1 .25l-2.2 2.2a15.1 15.1 0 0 1-6.6-6.6l2.2-2.2a1 1 0 0 0 .25-1A11.4 11.4 0 0 1 8.5 4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1 17 17 0 0 0 17 17 1 1 0 0 0 1-1v-3.5a1 1 0 0 0-1-1z"/></svg></span>New lead for your business, 9:42 PM</div>
+              <p class="x-card-body"><strong>Mike R.</strong> needs a storm-damaged tree taken down this week. Wants a quote.</p>
+              <p class="x-card-meta">Answered by your AI receptionist</p>
             </div>
           </div>
         </div>
-        <div class="testimonial-block fade-in">
-          <blockquote>
-            <p>They worked with us through the weekend to make our website and tech systems even better for all our members. What we love most is their response time and speed of implementation, executed with incredible precision and professionalism. Truly an elite level of work not commonly seen in this space. CBNA is blessed to have them on our team.</p>
-          </blockquote>
-          <div class="testimonial-author">
-            <img src="images/clients/cbna-logo.jpeg" alt="CBNA" class="testimonial-avatar" loading="lazy">
-            <div>
-              <strong>Cesar Barros</strong>
-              <span>Connecticut Business Networking Association</span>
+
+        <div class="x-feature">
+          <div class="x-feature-text">
+            <h3>More reviews, higher on Google</h3>
+            <p>A text after every job asks happy customers for a review, and we tune your Google Business Profile so nearby searches find you.</p>
+            <ul class="x-checks">
+              <li>Automatic review requests</li>
+              <li>Google Business Profile optimization</li>
+              <li>Local rankings for your service area</li>
+            </ul>
+          </div>
+          <div class="x-stage">
+            <div class="x-photo"><img src="images/stock/cafe-owners.webp" alt="Two local business owners behind their counter" width="1200" height="675" loading="lazy"></div>
+            <div class="x-card" aria-hidden="true">
+              <div class="x-card-top"><span class="x-card-dot"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg></span>New Google review for your business</div>
+              <p class="x-card-body"><span class="x-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><br>Fast, friendly and fair. Booked them again for the spring.</p>
+              <p class="x-card-meta">Sent automatically after the job</p>
             </div>
           </div>
         </div>
+      </div>
+
+      <p class="x-also">Also: <span>Follow-up texts</span> <span>Google and social ads</span> <span>Monthly SEO</span> <a href="services.html">All services &#8594;</a></p>
+    </div>
+  </section>
+
+  <section class="x-section x-sand" id="work">
+    <div class="x-wrap">
+      <div class="x-center">
+        <h2 class="x-h2">Real sites for real local businesses.</h2>
+      </div>
+      <div class="x-work">
+        <a href="https://cedarstonetreeworks.com/" target="_blank" rel="noopener">
+          <img src="images/work/live/cedar-desktop.webp" alt="Cedar Stone Tree Works homepage" width="1200" height="750" loading="lazy">
+          <span class="x-work-body"><span class="x-work-kind">Tree service, CT</span><span class="x-work-name">Cedar Stone Tree Works</span></span>
+        </a>
+        <a href="https://katzhardware.com/" target="_blank" rel="noopener">
+          <img src="images/work/live/katz-desktop.webp" alt="Katz Ace Hardware homepage" width="1200" height="750" loading="lazy">
+          <span class="x-work-body"><span class="x-work-kind">Hardware store, Glastonbury</span><span class="x-work-name">Katz Ace Hardware</span></span>
+        </a>
+        <a href="https://thecbna.org/" target="_blank" rel="noopener">
+          <img src="images/work/live/cbna-desktop.webp" alt="Connecticut Business Networking Association homepage" width="1200" height="750" loading="lazy">
+          <span class="x-work-body"><span class="x-work-kind">Business association, CT</span><span class="x-work-name">Connecticut Business Networking Association</span></span>
+        </a>
+        <a href="https://taquitosmexicorestaurant.com/" target="_blank" rel="noopener">
+          <img src="images/work/live/taquitos-desktop.webp" alt="Taquitos Mexico homepage" width="1200" height="750" loading="lazy">
+          <span class="x-work-body"><span class="x-work-kind">Restaurant, Brooklyn</span><span class="x-work-name">Taquitos Mexico</span></span>
+        </a>
+        <a href="https://rbmbrokerage.com/" target="_blank" rel="noopener">
+          <img src="images/work/live/rbm-desktop.webp" alt="RBM Brokerage homepage" width="1200" height="750" loading="lazy">
+          <span class="x-work-body"><span class="x-work-kind">Real estate, Brooklyn</span><span class="x-work-name">RBM Brokerage</span></span>
+        </a>
+        <a href="https://reignabundantia.com/en" target="_blank" rel="noopener">
+          <img src="images/work/live/reign-desktop.webp" alt="Reign Haus of Abundancia homepage" width="1200" height="750" loading="lazy">
+          <span class="x-work-body"><span class="x-work-kind">Financial coaching</span><span class="x-work-name">Reign Haus of Abundancia</span></span>
+        </a>
+      </div>
+      <p class="x-more"><a href="portfolio.html" class="x-btn x-btn-ink">See all our work</a></p>
+    </div>
+  </section>
+
+  <section class="x-section x-on-dark">
+    <div class="x-wrap">
+      <div class="x-center">
+        <h2 class="x-h2">What our clients say.</h2>
+      </div>
+      <div class="x-quotes">
+        <figure class="x-quote">
+          <span class="x-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <blockquote><p>&ldquo;Extremely happy with how our website turned out. It's better than most of my competitors' sites, and we've already gotten leads from the contact form. These guys know what they're doing.&rdquo;</p></blockquote>
+          <figcaption class="x-quote-who"><img src="images/clients/cedar-logo.png" alt="" width="52" height="52" loading="lazy"><div><strong>Merick</strong><span>Owner, Cedar Stone Tree Works</span></div></figcaption>
+        </figure>
+        <figure class="x-quote">
+          <span class="x-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <blockquote><p>&ldquo;What we love most is their response time and speed of implementation, executed with incredible precision and professionalism. Truly an elite level of work not commonly seen in this space.&rdquo;</p></blockquote>
+          <figcaption class="x-quote-who"><img src="images/clients/cbna-logo.jpeg" alt="" width="52" height="52" loading="lazy"><div><strong>Cesar Barros</strong><span>Connecticut Business Networking Association</span></div></figcaption>
+        </figure>
       </div>
     </div>
   </section>
 
-  <!-- Bento Services Showcase -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header fade-in">
-                <h2>Then we make the phone ring.</h2>
-        <p>A good-looking site is the start. We add the tools that turn searches into calls and calls into booked work.</p>
+  <section class="x-section">
+    <div class="x-wrap x-split">
+      <div>
+        <h2 class="x-h2">Getting started is easy.</h2>
+        <ol class="x-steps">
+          <li><span class="x-num">01</span><div><h3>Free intro call</h3><p>30 minutes on your business and what you need.</p></div></li>
+          <li><span class="x-num">02</span><div><h3>Strategy and design</h3><p>You see the design before we build anything.</p></div></li>
+          <li><span class="x-num">03</span><div><h3>Build and launch</h3><p>Hand-coded, tested and live in 1-2 weeks.</p></div></li>
+          <li><span class="x-num">04</span><div><h3>Grow</h3><p>Hosting, updates and SEO every month.</p></div></li>
+        </ol>
+        <p class="x-steps-cta"><a href="book.html" class="x-btn x-btn-ink">Book a free call</a></p>
       </div>
-
-      <div class="services-bento">
-        <!-- Large feature: Websites -->
-        <div class="bento bento-lg fade-in">
-          <span class="bento-eyebrow">Professional Websites</span>
-          <h3>Clean, fast, mobile-first sites that rank on Google and make customers call.</h3>
-          <p>Hand-coded for speed and SEO from day one. No templates, no bloat, just sites built to perform.</p>
-          <div class="bento-visual" aria-hidden="true">
-            <div class="grid-pattern"></div>
-            <div class="glow"></div>
-            <div class="bento-browser">
-              <div class="bento-browser-bar">
-                <span></span><span></span><span></span>
-              </div>
-              <div class="bento-browser-body">
-                <div class="bb-nav">
-                  <div class="bb-logo"></div>
-                  <div class="bb-nav-links">
-                    <span></span><span></span><span></span>
-                  </div>
-                  <div class="bb-nav-cta"></div>
-                </div>
-                <div class="bb-hero">
-                  <div class="bb-hero-text">
-                    <div class="bb-headline"></div>
-                    <div class="bb-sub short"></div>
-                    <div class="bb-cta"></div>
-                  </div>
-                  <div class="bb-hero-image">
-                    <div class="bb-img-bars">
-                      <span></span><span></span><span></span><span></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- AI Voice Agent: narrow with phone visual -->
-        <div class="bento bento-md fade-in">
-          <div class="bento-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          </div>
-          <h3>AI Voice Agent</h3>
-          <p>AI picks up 24/7, captures caller info, and texts you the lead.</p>
-          <div class="bento-visual visual-call" aria-hidden="true">
-            <div class="grid-pattern"></div>
-            <div class="glow"></div>
-            <div class="vis-call">
-              <div class="vis-call-orb">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
-              </div>
-              <div class="vis-wave">
-                <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-              </div>
-              <div class="vis-call-label">AI on the line</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Reviews: floating review card -->
-        <div class="bento bento-md fade-in">
-          <div class="bento-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          </div>
-          <h3>Review &amp; Follow-Up</h3>
-          <p>Auto-text every customer after the job. More reviews, higher rankings.</p>
-          <div class="bento-visual visual-review" aria-hidden="true">
-            <div class="grid-pattern"></div>
-            <div class="glow"></div>
-            <span class="vis-badge">+1</span>
-            <div class="vis-review">
-              <div class="vis-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-              <div class="vis-review-text">Best in the area!</div>
-              <div class="vis-review-meta">New Google review</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- SEO: search bar + result -->
-        <div class="bento bento-md fade-in">
-          <div class="bento-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          </div>
-          <h3>SEO &amp; Google Maps</h3>
-          <p>Get found when people nearby search for what you do.</p>
-          <div class="bento-visual visual-search" aria-hidden="true">
-            <div class="grid-pattern"></div>
-            <div class="glow"></div>
-            <div class="vis-search">
-              <div class="vis-search-bar">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                <span>hvac near me<span class="vis-cursor"></span></span>
-              </div>
-              <div class="vis-result">
-                <div class="vis-pin">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
-                </div>
-                <div class="vis-result-text">
-                  <div class="vis-result-name">Your Business</div>
-                  <div class="vis-result-meta"><span class="vis-result-stars">&#9733;</span> 4.9 &middot; Open</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Marketing & Ads: growth bar chart -->
-        <div class="bento bento-md fade-in">
-          <div class="bento-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="14 7 21 7 21 14"/></svg>
-          </div>
-          <h3>Marketing &amp; Ads</h3>
-          <p>Google and social ads that reach people nearby who are ready to buy.</p>
-          <div class="bento-visual visual-ad" aria-hidden="true">
-            <div class="grid-pattern"></div>
-            <div class="glow"></div>
-            <div class="vis-ad">
-              <div class="vis-ad-bars">
-                <span style="--h:22%"></span>
-                <span style="--h:34%"></span>
-                <span style="--h:48%"></span>
-                <span style="--h:42%"></span>
-                <span style="--h:68%"></span>
-                <span style="--h:84%"></span>
-                <span style="--h:100%"></span>
-              </div>
-              <div class="vis-ad-label">Calls from ads, tracked weekly</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div style="text-align:center;margin-top:48px;" class="fade-in">
-        <a href="services.html" class="btn btn-outline">View All Services &#8594;</a>
-      </div>
+      <div class="x-photo"><img src="images/stock/front-door.webp" alt="Contractor shaking hands with a homeowner" width="1200" height="800" loading="lazy"></div>
     </div>
   </section>
 
-  <!-- How It Works -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header fade-in">
-                <h2>From call to launch in four steps.</h2>
-        <p>Simple process, no runaround. You tell us what you need, we build it.</p>
+  <section class="x-final">
+    <div class="x-wrap">
+      <div class="x-faces">
+        <img src="images/headshots/Iamiah.png" alt="Jamiah Bartlett" width="123" height="118" loading="lazy">
+        <img src="images/headshots/javier.png" alt="Javier Flores" width="127" height="147" loading="lazy">
+        <img src="images/headshots/nolan.png" alt="Nolan Krieger" width="147" height="171" loading="lazy">
       </div>
-      <div class="process-timeline">
-        <div class="process-card fade-in">
-          <span class="pc-number">01</span>
-          <h3>Project Strategy Call</h3>
-          <p>30 minutes. We learn about your business, goals, and what you need to start booking more work.</p>
-        </div>
-        <div class="process-card fade-in">
-          <span class="pc-number">02</span>
-          <h3>Strategy &amp; Design</h3>
-          <p>We map out the site, pick the right tools, and show you a design before we build anything.</p>
-        </div>
-        <div class="process-card fade-in">
-          <span class="pc-number">03</span>
-          <h3>Build &amp; Launch</h3>
-          <p>Hand-coded, tested, and live within 1-2 weeks. You get a real website, not a drag-and-drop template.</p>
-        </div>
-        <div class="process-card fade-in">
-          <span class="pc-number">04</span>
-          <h3>Grow &amp; Support</h3>
-          <p>Ongoing SEO, AI tools, and monthly support. We keep things running so you can focus on running your business.</p>
-        </div>
+      <h2 class="x-h2">Talk to the people who build it.</h2>
+      <p class="x-lede">No call center. We answer within 24 hours.</p>
+      <div class="x-cta-row">
+        <a href="book.html" class="x-btn">Book a free call</a>
+        <a href="tel:8608158662" class="x-btn x-btn-quiet">Call 860-815-8662</a>
       </div>
-    </div>
-  </section>
-
-  <!-- FAQ Section -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header fade-in">
-                <h2>Frequently asked questions.</h2>
-        <p>Quick answers to the questions we hear most.</p>
-      </div>
-      <div class="faq-list">
-        <details class="faq-item fade-in">
-          <summary class="faq-question">What does NJ Developments do?</summary>
-          <div class="faq-answer-wrap">
-            <div class="faq-answer">
-            <p>We build professional websites, set up AI voice agents that answer your calls 24/7, automate Google review requests after every job, and handle your SEO so customers find you on Google. Everything a local service business needs to get more customers without spending time on marketing.</p>
-          </div>
-          </div>
-        </details>
-        <details class="faq-item fade-in">
-          <summary class="faq-question">How fast can you build my website?</summary>
-          <div class="faq-answer-wrap">
-            <div class="faq-answer">
-            <p>Most websites go from concept to launch in 1-2 weeks. We move fast because you need to start getting leads, not wait around for months.</p>
-          </div>
-          </div>
-        </details>
-        <details class="faq-item fade-in">
-          <summary class="faq-question">I already get work from referrals. Why do I need a website?</summary>
-          <div class="faq-answer-wrap">
-            <div class="faq-answer">
-            <p>Referrals are great, but they have a ceiling. A website means people searching for your service in your area find you too. That's a second pipeline of leads you're currently missing. And when someone gets a referral, the first thing they do is Google you. If you don't show up, you lose the job before you know about it.</p>
-          </div>
-          </div>
-        </details>
-        <details class="faq-item fade-in">
-          <summary class="faq-question">What's an AI voice agent?</summary>
-          <div class="faq-answer-wrap">
-            <div class="faq-answer">
-            <p>It's an AI that answers your phone when you can't. If you're with a customer, driving, or it's after hours, the voice agent picks up, gets the caller's name, what they need, and their contact info, then texts it all to you. You call them back when you're free instead of losing them to a competitor who picks up.</p>
-          </div>
-          </div>
-        </details>
-        <details class="faq-item fade-in">
-          <summary class="faq-question">Do you provide ongoing support?</summary>
-          <div class="faq-answer-wrap">
-            <div class="faq-answer">
-            <p>Yes. We handle hosting, updates, and support on a monthly basis. You focus on running your business, we keep everything running online.</p>
-          </div>
-          </div>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Banner -->
-  <section class="cta-banner">
-    <div class="container fade-in">
-      <h2>Stop losing leads. <span class="accent">Let's talk.</span></h2>
-      <p>Tell us about your business and we'll show you exactly how to get more customers online.</p>
-      <a href="book.html" class="btn btn-glow">Start your project &#8594;</a>
+      <p class="x-names">Jamiah, Javier and Nolan, NJ Developments</p>
     </div>
   </section>
 
@@ -672,6 +452,7 @@
     </a>
     <a href="book.html" class="mobile-cta-start">Start a project &rarr;</a>
   </div>
-  <script src="js/main.js?v=9"></script>
+  
+  <script src="js/main.js?v=10"></script>
 </body>
 </html>
